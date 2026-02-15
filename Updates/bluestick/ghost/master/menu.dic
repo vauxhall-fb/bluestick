@@ -530,6 +530,8 @@ Select.dosomething : all
  		"\![*]\q[Open Calendar,CALENDAR]\n"
 		"\![*]\q[Check Email,MailCheck]\n"
 		"\![*]\q[Open SSP Preferences,sspconfig]\n"
+        "\![*]\q[Update,keroupdatecheck]\n"
+ 	    "\![*]\q[Bug report,bugreport]\n\n"
 		
 		//"\![*]\q[Empty Recycle Bin,ChoiceGarbagecan]\n"
 		//I commented out the Empty Recycle Bin one because that one will need some tweaks to the dialogue to work for every ghost, since it uses Girl and Triangle's names. If you want your ghost to have this feature, uncomment this and fill out the corresponding dialogue below for Select.ChoiceGarbageCan.
@@ -665,20 +667,20 @@ OpenKeroMenu : all
 //If you click cancel. Replace dialogue as you want.
 Select.keroCANCEL
 {
-	"\1\s[10]This is menu cancel dialogue.\e"
+	"\0\s[0]This is menu cancel dialogue.\e"
 }
 
 
 //This is when they select bug report. This is mostly meant to briefly give the user information about you, the creator, and how to report a problem to you. This can be handy if the person forgot where they got their ghost or how to contact you. Add whatever info you like here.
 Select.bugreport
 {
-"\0\s[0]This is the bug report dialogue. \w5Report bugs to github.com/vauxhall-fb/bluestick. \w5We were downloaded from \_a[http://vauxhall-fb.straw.page/bluestick/]Strawpage\_a.\e"
+"\0\s[0]This is the bug report dialogue. \w5Report bugs to github.com/vauxhall-fb/bluestick. \w5i was downloaded from \_a[http://vauxhall-fb.straw.page/bluestick/]Strawpage\_a.\e"
 }
 
 //When clicked, this will automatically tell the ghost to check for updates. More detail on updates in etc.dic. You can leave this alone.
 Select.keroupdatecheck
 {
-	"\1\s[10]\![updatebymyself]\e"
+	"\0\s[0]\![updatebymyself]\e"
 }
 
 //--Test Variable --------------------------------------------------------
