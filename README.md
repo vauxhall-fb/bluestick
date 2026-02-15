@@ -6,6 +6,10 @@ this blue stick really is a cool guy, don't you think? :)
 
 for contact or concerns DM me on [Tumblr](https://tumblr.com/vauxhall-fb), leave an issue report here on Github, or leave a [Strawpage](https://vauxhall-fb.straw.page) gimmick
 
+download only the .nar file. the updates folder is for network updates.
+
+---
+
 thank you to https://www.ashido.com/ukagaka/ for the banger tutorial and template i literally could not have birthed bluestick without em
 
 shoutout to my bsf noah for suggesting a fun little 1-in-100 dialogue lol
