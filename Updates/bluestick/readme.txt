@@ -27,7 +27,7 @@ f1 - show info
 
 Version Log :
 
-02/??/26 _ 1.0 - He gets to see the world! (Official distribution)
+02/15/26 _ 1.0 - He gets to see the world! (Official distribution)
 01/24/26 - 0.0 - He exists! (Started development)
 
 ----
