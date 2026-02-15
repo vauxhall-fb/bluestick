@@ -1,0 +1,212 @@
+﻿//---------------------------Envelopes--------------------------
+//This .dic file is probably one of the simplest you will have to edit, and in fact, if the way it works doesn't appeal to you, you can completely ignore it if you like!
+
+//Basically, what this file does is set up some things that, for the purposes of this file, I'll call envelopes (this is what they're referred to as on the CROW-SSP Dictionary site... at least, that's what I remember, it's been a while since I've checked it). They are technically functions and can do many things, but this file is mostly an organizational tool for storing lists you may use.
+
+//For the purposes of this file, an envelope is a list that you can populate with items, and this list can be called later during dialogue with the %(name) format. If you've read the walkthrough or gone through any of the other .dic files, you've probably seen these before. %(username) is one, which displays the user's name, and %(heshe) is another, which displays the right pronoun depending on what the user selected in bootend.dic or menu.dic. Other ones include %(passmin), which shows how many minutes have passed since the ghost was started, %(screenheight) which shows the height of the display they're currently on, and %(keroname) for the name of the second character, among many, many others. Many of these are predefined by the AYA scripting and will be listed on the CROW-SSP site mentioned above, and many of them you will never have to use.
+
+//So where does this file come in? Well, you can define your own envelopes/variables if you want! Here's an example.
+
+exampleenvelope
+{
+	"Example Envelope Dialogue 1"
+	"Example Envelope Dialogue 2"
+	"Example Envelope Dialogue 3"
+}
+
+//As you can see, we stated a word, opened some brackets, wrote some text, and closed the brackets. Now when you write ghost dialogue, you can write %(exampleenvelope) and your ghost will randomly display any of the three bits of text within the brackets! You can go ahead and test this yourself to see how it works, and I'll include some sample dialogue with this in aitalk.dic.
+
+//What can you use this kind of envelope for? You can store tons of random information to keep your ghost's dialogue varied! You can store various cities you like in %(city), musicians you like in %(musicians), places your ghost has been in %(places), food you like in %(food), movies you like in %(movie), fandoms you like in %(fandom), characters you like in %(fandomcharacter), celebrities you like under %(celebrity) or friends of yours in %(friends) or bnfs in %(bnfs), folders on your computer under %(folders), Pokemon you like under %(pokemon), insults under %(insult), swear words under %(swearword) which could potentially be hilarious, just about anything! You can make lists of absolutely anything to use with dialogue for your ghost! This .dic file is only limited by your imagination!
+
+//Not only that, but you can put an envelope IN an envelope. Here's another example.
+
+internalenvelope
+{
+	"Internal Envelope Dialogue 1 - %(exampleenvelope)"
+	"%(username)'s computer"
+	"Here is a blanklist object - %(blanklist)."
+}
+
+//You can nest envelopes all day long, although it might get kind of convoluted if you don't keep track. This is particularly handy with %(username), so your ghost can be specific if they're talking about something of the user's, like their files or folders for example. I'll leave a few lists in here you can fill out as you like. And if this doesn't give you ideas, you can ignore this file, since nothing in it will show up unless you write it into the dialogue. You can add or take away as many items as you want from each list.
+
+		//*********************Advanced User Info*******************************
+	  //These text boxes are meant for those who have an interest in expanding or using more complicated functions in their ghost. Also for my own reference in the future since I plan on using this template too, haha. If you have no interest in any of this and just want to keep things as simple as possible, feel free to skip these boxes.
+	  
+	  //Because these are basically their own functions, you can do other things with them as well as display dialogue. You can add if/else checks, run other functions, have pools of alternate dialogue... the possibilities are really endless.
+	  
+	  //One particularly useful thing you can do is add value changes to an envelope, if your dialogue is in a place where it's not easy to add the change directly. For example...
+	  
+	  //FeelingsGoUp
+	  //{
+	  //Feelings += 1
+	  //"Thank you, %(username), that was really nice of you.\e"
+	  //}
+	  
+	  //So this would display the dialogue as well as change the value. Then you can call this in dialogue if you need to to change the value without having to do a bunch of fiddly business. Specifically I'm thinking about things like RandomTalk, where it can be finicky to have dialogue that also changes a value like this. Like "Oh... wow... %(FeelingsGoUp\e" could go into RandomTalk and still change the value effectively without breaking anything. You can of course also change multiple values at once, and if you don't put dialogue in there, it will change the value invisibly.
+	  
+	  //Another use for these envelopes is to shortcut certain long lines of SakuraScript you don't want to have to keep typing. A good example is if you want to change the font for a character. Take Papyrus from my Gaster ghost, he talks in the font Papyrus. But I don't want to have to type the tag for it for every line of dialogue he does. So instead I can put it in an envelope.
+	  
+	  //p
+	//	{
+	//	"\f[name,Papyrus UT]\f[height,16]"
+	//	}
+		
+		//And then I can make one that'll change the font back to normal.
+		
+	//	d
+	//{
+	//"\f[name,default]\f[height,default]"
+	//}
+	
+	//So in dialogue, to change fonts I'd just have to go "%(p)HEY THERE!%(d)" to change fonts back and forth quickly. These kind of shortcuts can be very useful.
+	
+	//Another way to use envelopes is to store multiple poses for SurfaceRestore in aitalk.dic. Gaster for example has several neutral idle poses, but also several poses for when he's scared. So I can make an envelope like
+	
+	//scared
+	//{
+	//"\0\s[9]\i[3]\i[104]\i[39]"
+	//"\0\s[100]\i[2]\i[40]\i[104]"
+	//"\0\s[100]\i[2]\i[40]\i[106]"
+	//}
+	
+	//And have him randomly pick one whenever I use %(scared) in dialogue. This can be an easy way to vary certain poses without having to manually put them in one at a time, and have some variety when your ghost goes back to its neutral pose in SurfaceRestore.
+		
+	  //***********************************************************************
+
+i
+{
+"\f[italic,true]"
+}
+
+b
+{
+"\f[bold,true]"
+}
+
+clrmrk
+{
+"\f[italic,false]\f[bold,false]\f[sub,false]\f[sup,false]\f[height,default]\f[default]"
+}
+
+continyoubootdialogue
+{
+"\w8\c\0\s[0]anyways,\w5 \s[5]i'm really glad to be here on your computer! i think it's really cool that you decided to download me onto here. \w8\n\n[half]\s[6]can't wait to hang out with you!\e"
+}
+
+testingwhatthefuck
+{
+"\0\s[0]i should get back into that one game i was terrifyingly good at. \w8\n\n\s[8]what was it again??\w8"
+    --
+    "...something...\w8 %(i) riders,%(clrmrk)"
+    "%(i) never...\w5ball, %(clrmrk)\w8or something...."
+    "...something...\w8 %(i) colors,%(clrmrk)"
+    "...something...\w8 %(i) sekai,%(clrmrk)"
+    "%(i) world of...\goo, %(clrmrk)\w8or something...."
+    "%(i) something...\w5parable,%(clrmrk)"
+    "%(i) bonk...\w5something...%(clrmrk)"
+    "%(i) uma...\w5something...%(clrmrk)"
+    --
+    " \w8i think......\e"
+}
+
+pizzachainyuh
+{
+"\0\s[4]i wish i had some pizza from "
+    --
+    "Pizza Hut"
+    "Taco Bell"
+    "Little Cesar's"
+    "Walmart"
+    "that one local joint in town"
+    --
+    "....\w8\w8\n\n\s[0]mmmmm, pizza..........\e:chain=chainpizza"
+}
+
+helloeverybodymynameismarkiplier
+{
+_tempiplier = RAND(100)
+
+case _tempiplier
+    {
+        when 87
+        {
+        "\0\s[5]Mark: Hello everybody, my name is Markiplier and welcome to Five Nights at Freddy's, an indie horror game that you guys suggested, en masse, and I saw that Yamimash played it and he said it was really really good... \s[0]So I'm very eager to see what is up. \s[2]And that is a terrifying animatronic bear! \s[8]'Family pizzeria looking for security guard to work the nightshift.' \s[0]Oh... 12 a.m. The first night. If I didn't wanna stay the first night, why would I stay any more than... five... Why I stay any more than two- \s[8]hello? Okay... \w8\n\nPhone rings\n\nMark: \s[8]Hello?... Hello? Oh, oh I can't move. \s[4]That is a creepy skull, there's creepy things on the wall. \s[0]Oh, hello.\n\nPhone Guy: Hello?\n\n\s[5]Mark: Hi!\n\nPhone Guy: Hello, hello?\n\nMark: \s[6]HI!\n\nPhone Guy: Uh, I wanted to record a message for you to help you get settled in on your first night.\n\nMark: \s[4]Ugh...\n\nPhone Guy: Um, I actually worked in that office before you.\n\nMark: \s[0]Ah...\n\nPhone Guy: I'm finishing up my last week now, as a matter of fact.\n\nMark: \s[8]Hm?\n\nPhone Guy: So, I know it can be a bit overwhelming...\n\n\s[2]Mark: Ugh! \s[4]U-hu-hu...\n\nPhone Guy: ...but I'm here to tell you there's nothing to worry about.\n\nMark: \s[0]Eh...\n\nPhone Guy: Uh, you'll do fine. So, let's just focus on getting you through your first week.\n\nMark: \s[8]Okay, sounds g- Okay...\n\nPhone Guy: Okay? Uh, let's see, first there's an introductory greeting from the company that I'm supposed to read.\n\nMark: \s[0]Mm-hm.\n\nPhone Guy: Uh, it's kind of a legal thing, you know. Um, 'Welcome to Freddy Fazbear's Pizza.\n\nMark: Okay.\n\nPhone Guy: A magical place for kids and grown-ups alike...\n\nMark: \s[4](Scared laughing)\n\nPhone Guy: where fantasy and fun come to life.\n\nMark: \s[2]Ughuh!\n\nPhone Guy: Fazbear Entertainment is not responsible for damage to property or person. Upon discovering that damage or death has occurred, a missing person report will be filed within 90 days, or as soon property and premises have been thoroughly cleaned and bleached, and the carpets have been replaced.\n\nMark: \s[4](panicking)\n\nPhone Guy: Blah blah blah, now that might sound bad, I know...\n\nMark: \s[5]Yeah!\n\nPhone Guy: ...but there's really nothing to worry about. Uh, the animatronic characters here do get a bit quirky at night, but do I blame them? No.\n\nMark: \s[4](Scared laughing)\n\nPhone Guy: If I were forced to sing those same stupid songs for twenty years and I never got a bath? I'd probably be a bit irritable at night too. So, remember, these characters hold a special place in the hearts of children and we need to show them a little respect, right?\n\nMark: \s[5]Okay!\n\nPhone Guy: Okay.\n\nMark: \s[1]Okay...\n\nPhone Guy: So, just be aware, the characters do tend to wander a bit.\n\nMark: No they...\n\nPhone Guy: Uh, they're left in some kind of free roaming mode at night.\n\nMark: \s[4](Scared laughing)\n\nPhone Guy: Uh...Something about their servos locking up if they get turned off for too long.\n\nMark: \s[8]Ugh...\n\nPhone Guy: Uh, they used to be allowed to walk around during the day too, but then there was The Bite of '87.\n\nMark: \s[2]\f[height,20]\f[bold,true]THE BITE?!%(clrmrk)\n\nPhone Guy: Yeah.\n\nMark: %(i)What bite!?%(clrmrk)\n\nPhone Guy: I-It's amazing that the human body can live without the frontal lobe, you know?\n\nMark: \f[height,17]Why?!%(clrmrk)\n\nPhone Guy: Uh, now concerning your safety, the only real risk to you as a night watchman here, if any, is the fact that these characters, uh, if they happen to see you after hours probably won't recognize you as a person.\n\nMark: Oh, %(i)OH!%(clrmrk)\n\nPhone Guy: They'll p-they'll most likely see you as a metal endoskeleton without its costume on. Now since that's against the rules here at Freddy Fazbear's Pizza, they'll probably try to... forcefully stuff you inside a Freddy Fazbear suit.\n\nMark: \s[0]Oh, I get it.\n\nPhone Guy: Um, now, that wouldn't be so bad if the suits themselves weren't filled with crossbeams, wires, and animatronic devices...\n\nMark: \s[8]Uh-huh.\n\nPhone Guy: ...especially around the facial area.\n\nMark: Uh-huh.\n\nPhone Guy: So, you could imagine how having your head forcefully pressed inside one of those could cause a bit of discomfort...\n\nMark: \s[2]Yeah!\n\nPhone Guy: ...and death. Uh, the only parts of you that would likely see the light of day again would be your eyeballs and teeth when they pop out the front of the mask, heh.\n\nMark: \s[4]Ugh! \s[1]Oh, why... What happened?\n\nPhone Guy: Y-Yeah, they don't tell you these things when you sign up. But hey, first day should be a breeze. I'll chat with you tomorrow. Uh, check those cameras, and remember to close the doors only if absolutely necessary.\n\nMark: \s[4]That's not good...\n\nPhone Guy: Gotta conserve power. Alright, good night.\n\nCall ends\n\nMark: \s[2]Good night?!\n\nMark: \s[4]Oh no... Oh that's bad! \s[0]I understand what I need to do. I need to watch the cams so that they don't come after m- \s[2]One's missing!\n\nBonnie is in the Backstage\n\nMark: Oh, hi! There you are, pretty bunny thing... \s[1]Okay... Okay, okay, I get it, I get it, I get it, where'd you go? You're still there? \s[0]Alright, you stay there. \s[4]I don't know if it's good that you're staring at me! \s[8]Oh my god. I thought it was weird that I couldn't move, but this is totally different... than any horror game I've ever played. \s[0]So what you gotta do in case you're not getting it is you gotta watch the cameras to make sure they don't come by- and you only got a little much power- \s[8]Is he still there? \s[0]Hi, you're still there. \s[2]Wait a minute, what, Did you move?! \s[1]Okay, you didn't move. You don't move neither... You don't move nothing... If I see you moving... I don't wanna see anything...\s[2]Oh-oh-oh my god! Terrifying! \s[4]Why do I leave the doors open, why isn't there enough power?\n\nBonnie is in the Dining Area\n\nMark: \s[1]Hi, okay, you moved again. Hi. What are you doing there? Might be getting a little close to me...\n\nCamera goes static\n\nMark: \s[2]Uh-oh, oh, oh no, oh no, no, no! No-no-no... No, no, no, no, close it-eh! Close it, god dammit! \s[1]Eh. \s[5]You'll never get me! \s[0]Okay, you're over there, alright...It's okay. Why can't I even have enough power for lights? \s[2]Stay right there you douchebag! You stay right the F there... God dammit! That is like- this is like the most terrifying game I've ever played! They're gonna pop out at me! \s[4]Oh god, he's gone. \s[0]Hi. Okay. You're just gonna alternate between the two places, it's totally fine. Your other friends, they ain't moving. They ain't moving much. I see where I am. You're not near me. So, that's good. Just gonna p-periodically check... How much longer do I need- I need last to 6 a.m. \s[4]Oh god, am I gonna have enough power? Oh god, if I run out of power will they be able to get me? Oh god... \s[2]You stay right there! \s[4]Why am I still using some power? Oh god... Seriously, I w-... this is like... this is like... bad! \s[1]Okay, you're still there, okay. This is the first night, they said it should be easy the first night so I'm only assuming one of em... is gonna wandering around, and it's just a creepy bunny guy. \s[5](starts singing) Happy fun time at Freddy's... fun land... having such a wonderful time... (stops singing) \s[1]Okay, still there? Okay, you're still there... and I'm gonna name you... Bunny... Boliday-\n\nCamera goes static\n\nMark: \s[2]Oh god, where'd you go?! Oh god, is he here? Hello? Where'd he go? \s[1]Hi again, okay. \s[8]You stay right the F there! I don't want to have to deal with you.\n\nMark closes both doors\n\nMark: \s[0]Probably shouldn't do that, I need to conserve power. God dammit that was like half the damn thing the- I think the doors were down. \s[4]Still there? \s[1]Okay... Okay... \s[5]Okay! (scared laughing)\n\nMusic starts\n\nMark: \s[4]I hear that... \s[2]I hear that! Oh god! Where's the other one?! Where is he?! Ugh! Ugh! Where is he?! Where'd he go? Where'd he go, where'd he go, where are both of them, both of the-\n\nBonnie is in the West Hall\n\nMark: \s[2]Hi, you're really close to me! \s[4]Oh god, it's not 6 a.m. yet?\n\nChica is in Restrooms\n\nMark: \s[1]Hi. Okay. \s[8]So I think I just need to keep the left door closed? \s[4](Crying) Not okay, not okay! Is he behind that door? No, where'd he go? Where'd-\n\nChica is in the East Hall\n\n\s[2]Mark: Ah! \s[4]Oh, hi hi hi hi hi hi. Okay, okay, I don't have much power left. What are you gonna do? Is the other one still there? Ugh! \s[1]Hi... \s[2]Oh, you moved again! \s[4]Where where where where where? (Scared laughing) \s[2]What do I do? what do I do?\n\nChica is in East Hall Corner\n\nMark: \s[4]Oh, you are so right so behind that door! Oh, what happens if I open the door?! I'm gonna run out of power. Oh, I'm gonna run out of power! \s[1]Is he there? \s[4]I don't wanna die, I don't wanna die... I don't wanna die... \s[2]Ah, one percent power! (nervously grudging)\n\nPower out, doors open\n\nMark: Ah! Oh no! Oh no, no no no no no no no no! \s[4]Oh no no no no no no...\n\nFreddy flashes in left door\n\nMark: \s[2]Hi! Oh, god dammit! How're you doing?! \s[4]H-ugh...\n\n6 a.m. chimes\n\nMark: H-ugh, did I make it? \s[2]Did I make it?! \s[5]Yeah-ha! \s[4]Oh god not again! Why would I do this stupid job?! \s[8]Okay... Okay. So I ran out of power, but...\n\nPhone starts to call\n\nMark: \s[2]Oh hi, hi again! Do you have any see- sage advice for me? \s[1]Yep. Okay, yep. I know. Yep. Yep yep yep, what I can do for you? I know! \s[4]Oh god...\n\nPhone Guy: Uh, Hello?\n\nMark: \s[0]Hi.\n\nPhone Guy: Hello? Uh, well, if you're hearing this then you made it to day two, uh, congrats!\n\nMark: \s[5](laughs in panic)\n\nPhone Guy: Uh, I-I won't talk quite as long this time since Freddy and his friends tend to become more active as the week progresses.\n\nMark: \s[2]What?\n\nPhone Guy: Uhh, it might be a good idea to peek at those cameras while I talk just to make sure everyone's in their proper place, you know.\n\nBonnie is in Dining Area\n\nMark: \s[4]No.\n\nPhone Guy: Uh... Interestingly enough, Freddy himself doesn't come off stage very often. I heard he becomes a lot more active in the dark though, so, hey, I guess that's one more reason not to run out of power, right?\n\nMark: \s[5](panicked laughter)\n\nPhone Guy: Uh, I also want to emphasize the importance of using your door lights. There are blind spots in your camera view, and those blind spots happen to be right outside your doors. So if-if you can’t find something, or someone, on your cameras...\n\nBonnie is in the West Hall\n\nMark: \s[4]Ugh-h!\n\nPhone Guy: ...uh, be sure to check the door lights. Uh, you might only have a few seconds to react... Uh, not that you would be in any danger, of course. I'm not implying that.\n\nMark: \s[2]Of course!\n\nPhone Guy: Uh, also, uh, check on the curtain in Pirate Cove from time to time. The character in there seems to be unique in that he becomes more active if the cameras remain off for long periods of time. Uh, I guess he doesn't like being watched. \n\nBonnie is in W. Hall Corner\n\nMark: \s[4]Ugh-gh! Uh!\n\nPhone Guy: I don't know. Anyway, I'm sure you have everything under control. Uh, talk to you soon.\n\nCall ends\n\nMark: \s[8]Where's Pirate Cove? \s[4]Why are you going to leave me with this? \s[2]Don't leave me like this! \s[4]Where's, where's Big Yellow?\n\nChica is in Dining Area\n\nMark: \s[0]There's Big Yellow. Is he still there? Is he still there? \s[5]Yes, you're still here! Very good! Very good! \s[2]Oh! \s[4]Don't like this... \s[1]Is he still there? I'm so gonna run out of- Okay, he left. Okay. \s[5]Okay! \s[0]We're okay, we're gonna be fine. We're gonna be totally fine. We're gonna be fine- \s[2]hello. \s[1]Hello m-Bubsy- where's the other guy? Where's the other guy? \s[4]Where is he?! Where is he, where is he, where is he, where is he, where-\n\nBonnie is in the West Hall\n\nMark: \s[1]Oh, there... Okay. He's not the-\n\nFreddy looks straight in the camera\n\nMark: \s[2]Hi! Hey, Freddy, how you doing?! \s[1]Okay. You gonna be nearby? \s[2]You stay there! Where's the other one, where's the other one, where's the other one? \s[1]There he is. Okay. \s[4]I am pani- I am losing my shit right now! I am not okay with this!\n\nCamera goes static\n\nMark: \s[2]Oh god, not again! No, don't you dare do that! No no no. Don't you be d- Oh god!\n\nBonnie is in W. Hall Corner\n\nMark: \s[4]Ah! He's right outside the door! Uh! Hi!\n\nChica is in East Hall\n\nMark: \s[2]Hi! \s[4]Okay I'm gonna... keep an eye on you! \s[1]Maybe not, where'd you go, where'd you go? Kay... \s[4]god, This night is lasting forever!\n\nBonnie pops in West Door\n\nMark: \s[2]Ah! (unintelligible)! That's not okay! Oh oh oh... Okay, so one's by the-\n\nChica is in Dining Area\n\nMark: \s[1]Hi... 'Let's Eat!' Let's eat what? Are you still there? Okay, he's gone. Good. Stay gone, forever, and ever and ever and ever- \s[2]oh, you're coming back! Either that or you're leaving. \s[4]Oh, I'm not gonna have enough power to survive the night. \s[2]My butt is gonna be munched! I'm gonna be shoved into a teddy bear outfit, and they're gonna laugh! Where is he? Where'd he go?\n\nBonnie pops in West Door\n\nMark: AH! U-fe-fe-fe... That Bunny wants to get my giblets, but he can't have 'em! Not today! Not ever. \s[5](starts singing) Good thing Freddy is staying in his house. (stops singing) Hi Mister- \s[2]Wait, Bunny, you were just outside my door! \s[1]Kay... Where's the Ducky? Where's Mister- is that Mi- No, no Ducky there...\n\nChica is in Restrooms with hostile look in camera.\n\nMark: \s[4]Where's M- Hi, \s[5](scared laughter) Hi, Mister Ducky. \s[4](crying) God, this night is lasting so long... I just wanna go home. I never wanna play this game again. I'll be a good boy! \s[1]God dammit. This would be like terrifying if you... controlled the cameras with like an Oculus Rift or something. Oh, my god. Cause you just move your head back and forth... \s[2]Oh, my god. Hi again. \s[1]Where's the other one? Where'd he go, where'd he go- Oh, there he is. \s[2]Okay, so long as you two stay right there, you'll be good! You look very pretty! \s[4]H-ugh, where was the Pirate Cove Guy? \s[1]Oh, here is Pirate Cove, okay. So I just gotta... Hoo... I just gotta keep an eye on you guys. Gonna be fine! \s[2]OH, oh I bet using the camera takes power too- I'm down to 34%! I got 3 hours to go!\n\nMusic starts\n\nMark: \s[4]No. You're still there. You're still there. You're still there. You're looking at me now.\n\nFoxy is in Pirate Cove\n\nMark: \s[2]Hi, Pirate Cove man! O-oh! Oh my god... Oh, where'd they go? \s[1]Still there. Still there? \s[5]Pirate Cove Man! How you doin? Oh man, I love workin' at Didney Worl' (mockup of Disney World), it's ma favorite...\n\nFoxy enters his pre-sprint phase\n\nMark: \s[2]Hi! What are you doing out of your cage?! Please, get back in! I don't want you out of here! \s[4]Oh, he's coming for me! Oh, he's coming for me! Oh, why do I have to watch three of them? I am like legit freaking out right now. I am not okay with this. \s[2]Oh god, they moved. Where'd you move to? \s[8]Oh, you're coming down the hallway, huh? Which one are ya? You've not left Pirate Cove yet... You're still there... You're coming down that hallway... Pirate Cove Man, how you doing Pirate Cove Man?\n\nCamera goes static\n\nMark: \s[2]No! I got 2 hours left! No no no! No! What is that sound?\n\nBonnie is in W. Hall Corner\n\nMark: \s[1]Oh, he's right there. Well, he's not here just yet. I don't wanna run out of power. \s[4]Oh, the sounds, I don't like 'em.\n\nFoxy sprints to office\n\nMark: \s[2]Ah, fuck! No! Oh god!\n\nFoxy attacks!\n\nMark: \s[4]Ah-hah, fucking fuck! I tried to push it! Ho-Ho my god! Oh... Oh...\n\nGame Over\n\nMark: \s[4]Oh, game over indeed! \s[1]Oh, are those my eyeballs? Ah... (coughs) Oh hi... Okay. \s[0]So that was 'Five Nights at Freddy's'. I couldn't even survive two. \s[4]God dammit! Hah! Oh, god! Oh, I tried to hit the door- I tried so bad... Oh... \s[0]Okay. Okay, thank you all so much for watching, check out the other scary games that I've played, and if you wanna play this for yourself, you can check it in the description below. If you really want me to play it again and try to beat it, let me know in the comments below. Thanks again everybody, and as always, I will see you in the next video. \s[6]Bye-Bye!\n\n('Haunted' outro plays)"
+        }
+        others
+        {
+        "\0\s[8]i should replay fnaf. that was a pretty fun game."
+        }
+    }
+}
+
+blanklist
+{
+	"List object 1"
+	"List object 2"
+	"List object 3"
+	"List object 4"
+	"List object 5"
+}
+
+blanklist2
+{
+	"List object 1"
+	"List object 2"
+	"List object 3"
+	"List object 4"
+	"List object 5"
+	"List object 6"
+	"List object 7"
+	"List object 8"
+}
+
+blanklist3
+{
+	"List object 1"
+	"List object 2"
+	"List object 3"
+	"List object 4"
+}
+
+blanklist4
+{
+	"List object 1"
+	"List object 2"
+}
+
+//This envelope in particular I think is fun. You can use this in dialogue to pretend like your ghost is looking through your user's files!
+
+usersfolder
+{
+	"%(username)'s Recycle Bin"
+	"%(username)'s Document folder"
+	"%(username)'s Downloads folder"
+}
+
+
+//Now, this next envelope is unique. I've called it a double envelope at times, but this is actually technically an array. Note that it has a word, a comma, then another word. This is essentially a list being stored in this envelope. You can call one of the values by using brackets around the number of the list entry. So, the first value (the Korean word) would be %(lessonkor[0]) since all arrays start at 0. The second value (the definition) would be %(lessonkor[1]). If you have a longer array, like "word,word,word,word,word", you can keep calling values by changing the numbers, like %(lessonkor[5]) or %(lessonkor[10]). Arrays can be very powerful and useful for storing a lot of information in a condensed space, but I must level with you, I'm not very good at arrays or figuring out how to use them. :B They can be VERY useful though, if you can wrap your head around how they work. An example of pulling information from this array can be seen in aitalk.dic.
+
+stickactivities
+{
+	"Red,UNO,had a good hand"
+	"Yellow,monopoly,rolled a 12"
+	"Violet,MarioKart,kept winning"
+	"Gold,poker,knew how to play and they didn't"
+	"Cyan,natural disaster survival,didn't die every round like he did"
+}
+
+//You can also format your envelopes like this as one line separated by semicolons, but personally I think the spaced lists above look nicer. It's up to you however you want to set them up.
+
+blanklistparagraph
+{
+	"List paragraph 1"; "List paragraph 2"; "List paragraph 3"; "List paragraph 4"; "List paragraph 5";
+}
+
+
+ //**** Don't touch this ***************************************************************
+ //This is code stuff and nothing for you to worry about, just save the .dic and move on! You're done!
+ 
+ On_\person
+{
+ 	person
+}
