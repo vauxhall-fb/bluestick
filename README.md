@@ -30,6 +30,19 @@ i have a lot more planned for my glorious son, but will update him when i get ar
 
 # How to Install
 
+first of all, you need to download SSP, which can be done at the official site: https://ssp.shillest.net/ . find two pink boxes on the left, and click either *Complete Install Package* (the top-most download button) or *Complete Zip Package* (directly under complete full package) as pictured below:
+
+<img width="241" height="370" alt="Screen Shot 2026-02-17 at 19 14 55" src="https://github.com/user-attachments/assets/f1fe24c8-3ad6-4d2a-82f3-b125d1338767" />
+
+when downloading SSP, **do not leave it in your downloads folder or a locked/protected folder.** it's recommended to make a folder specifically for SSP. **also do not remove the .exe file from it's folder.**
+
+typically, on first start, SSP will boot in Japanese, which may display as simply hollow boxes depending on your system settings, or if you have the fakejapanese Winetrick enabled (Mac/Linux(?)). a pre-installed ghost name Emily is typically the first thing you'll see. to change the language, right-click on Emily to bring up the SSP menu, and select the *fourth option from the bottom*, as seen here.
+
+<img width="352" height="102" alt="Screen Shot 2026-02-17 at 19 22 08" src="https://github.com/user-attachments/assets/f552c90b-c55a-4156-aab0-9ff09c08d2f6" />
+<img width="372" height="80" alt="Screen Shot 2026-02-17 at 19 23 42" src="https://github.com/user-attachments/assets/03f220a1-e711-4a8f-bb81-a5d4496e330f" />
+
+note that this does *not* change the language of individual ghosts; Japanese ghosts such as Emily will remain in Japanese, while English ghosts will remain in English
+
 ---
 
 thank you to https://www.ashido.com/ukagaka/ for the banger tutorial and template i literally could not have birthed bluestick without em (yes this is mentioned above idc)
