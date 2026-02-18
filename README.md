@@ -109,7 +109,5 @@ Known Issues (allegedly) :
 
 - Issues with network updates but admittedly i might be a little incompetent with this specific feature so it'll prolly take a minute to fix :( sorrgy. might disable it completely if i cant work it out.
 - A few typos i think
-- Wrong homelinks EVERYWHERE, even in the balloon's files. entered http instead https like a DUMBASS. will upload new files/nar eventually.
-- ummm i forgot to add a thumbnail for Bluestick's balloon so it just shows as the z_simple template thumbnail.
 
 ---
