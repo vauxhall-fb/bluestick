@@ -41,9 +41,15 @@ typically, on first start, SSP will boot in Japanese, which may display as simpl
 <img width="352" height="102" alt="Screen Shot 2026-02-17 at 19 22 08" src="https://github.com/user-attachments/assets/f552c90b-c55a-4156-aab0-9ff09c08d2f6" />
 <img width="372" height="80" alt="Screen Shot 2026-02-17 at 19 23 42" src="https://github.com/user-attachments/assets/03f220a1-e711-4a8f-bb81-a5d4496e330f" />
 
-note that this does *not* change the language of individual ghosts; Japanese ghosts such as Emily will remain in Japanese, while English ghosts will remain in English
+note that this does *not* change the language of individual ghosts; Japanese ghosts such as Emily will remain in Japanese, while English ghosts will remain in English.
+
+# --
+
+Installing an individual ghost is far simpler than installing a
 
 ---
+
+# Other
 
 thank you to https://www.ashido.com/ukagaka/ for the banger tutorial and template i literally could not have birthed bluestick without em (yes this is mentioned above idc)
 
