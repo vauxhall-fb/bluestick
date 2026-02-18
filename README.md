@@ -6,7 +6,7 @@ this blue stick really is a cool guy, don't you think? :)
 
 for contact or concerns DM me on [Tumblr](https://tumblr.com/vauxhall-fb), the [Ukagaka Dream Team Forum](https://forum.ukagakadreamteam.com/u/vauxhall-fb), leave an issue report here on Github, or leave a [Strawpage](https://vauxhall-fb.straw.page) gimmick.
 
-download only the .nar file and the .zip file. the updates folder is for network updates.
+download only the .nar file and the *bluestick balloon.zip* file. the updates folder is for network updates.
 
 ---
 
