@@ -1,13 +1,15 @@
 Charset,UTF-8
 __system_settings_version__,2
-Char1.balloon.isleft,1
 scriptbox.left,818
+shiori.debugnotify,0
 Char0.ratio.x,0.902343750
 Char0.ratio.devid,lZXh+ck6GC8x21TkcvfWow==
 Char0.ratio.y,1.000000000
-Char0.balloon.isleft,1
 Char1.ratio.devid,lZXh+ck6GC8x21TkcvfWow==
 scriptbox.top,93
+shell,shell\master\
+FirstBoot,booted
 Char1.ratio.x,0.756250000
 Char1.ratio.y,1.000000000
+shell.ischanged.2,0
 __system_written_flag_do_not_remove__,written

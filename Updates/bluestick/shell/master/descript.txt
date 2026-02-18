@@ -20,7 +20,7 @@ charset,UTF-8
 type,shell
 name,BluestickDefShell
 craftman,vaux
-craftmanurl,http://vauxhall-fb.straw.page/bluestick
+craftmanurl,https://vauxhall-fb.straw.page/bluestick
 
 
 //Balloon Co-ordinates

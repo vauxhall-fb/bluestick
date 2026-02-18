@@ -24,7 +24,7 @@ kero.name,Ministick
 
 craftman,vaux
 craftmanw,Vaux
-craftmanurl,http://vauxhall-fb.straw.page/bluestick
+craftmanurl,https://vauxhall-fb.straw.page/bluestick
 
 
 //This is coding stuff, don't touch it.

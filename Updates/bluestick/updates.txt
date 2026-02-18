@@ -1,13 +1,13 @@
 charset,OSNative
 file,install.txte334ac8d760ea99b1067d571b767e48dsize=104date=2026-01-30T23:22:16
-file,readme.txt68d4e3a78abd02072914c4c8a262b432size=1047date=2026-02-15T16:14:40
+file,readme.txt7d0461288cd7697b884868fa7d48ce84size=1785date=2026-02-17T21:08:29
 file,thumbnail.png0992438ffe5ebf6f952be85cbb757c47size=42652date=2026-02-01T19:17:22
 file,ghost/master/aitalk.dic12f7e115c9ad3e10cb709ca4f17cf898size=43084date=2026-02-15T15:58:49
 file,ghost/master/anchor.dic201df4a2ecfa8a85feb258da396a33e4size=5180date=2023-09-28T18:34:06
 file,ghost/master/bluestick.ico7a9d2f571709cd8f61205409c4a5c827size=101424date=2026-02-03T16:49:36
 file,ghost/master/bootend.dic7ac4721e35c44e0c6d09e3d8cbb624a3size=38270date=2026-02-03T17:27:09
 file,ghost/master/commu.dic2922832b0b4a3bbdece1144088602404size=6800date=2026-02-01T20:43:44
-file,ghost/master/descript.txt3f20d82a3edd21043bfcd15a1896b0f9size=2635date=2026-02-03T16:50:05
+file,ghost/master/descript.txt1c73415e173906c607e6de199535926fsize=2636date=2026-02-17T19:40:30
 file,ghost/master/etc.dicda01dc82d970228d670d30800902e868size=38010date=2026-01-31T21:32:35
 file,ghost/master/gomi.dll51fe9597398db01e684a0f9d52c63242size=13312date=2004-06-01T18:00:04
 file,ghost/master/gt_template.ico9b275939dbf11bd2ec5f4ef3e00fa06asize=1148date=2014-11-09T15:17:39
@@ -25,7 +25,7 @@ file,ghost/master/yaya_base/compatible.dic4f8b1e8c8c08dc44e70b1bd4f52a1affsize
 file,ghost/master/yaya_base/config.dicd07874f4b1ba03ba111df8f2fa3cd6dbsize=2592date=2023-06-01T05:32:24
 file,ghost/master/yaya_base/optional.dicff4da728a656a8aa6a38939e654c51f2size=9953date=2023-06-01T05:32:24
 file,ghost/master/yaya_base/shiori3.dic18b395e9ffcd3fb772ded9046ed4b57csize=54846date=2023-06-01T05:32:24
-file,shell/master/descript.txte5bc5226b6f69915a45cd8a18af1f70asize=5491date=2026-01-31T00:09:11
+file,shell/master/descript.txtd5e090a1d40348a28aac35300ecf9cd2size=5492date=2026-02-17T19:40:02
 file,shell/master/menu_background.pngee82ad72761d4837c3334f61ade1fbc5size=2775date=2014-11-03T07:22:30
 file,shell/master/menu_foreground.pnge0d10ee3534c5391c8e97a0897dc77a9size=2775date=2014-11-03T07:12:44
 file,shell/master/menu_sidebar.png7c405dcca0c16de439fcf21b4efecbb7size=7225date=2014-11-03T07:25:46
