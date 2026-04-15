@@ -1,25 +1,26 @@
 charset,OSNative
 file,install.txte334ac8d760ea99b1067d571b767e48dsize=104date=2026-01-30T23:22:16
-file,readme.txt7d0461288cd7697b884868fa7d48ce84size=1785date=2026-02-17T21:08:29
+file,readme.txt0745c1b51007bece00460200a73c869csize=1971date=2026-04-14T21:31:46
 file,thumbnail.png0992438ffe5ebf6f952be85cbb757c47size=42652date=2026-02-01T19:17:22
-file,ghost/master/aitalk.dic12f7e115c9ad3e10cb709ca4f17cf898size=43084date=2026-02-15T15:58:49
+file,ghost/master/aitalk.dic2be3ad7e923366dd8bc387577e8e3cf9size=47402date=2026-04-14T21:09:37
 file,ghost/master/anchor.dic201df4a2ecfa8a85feb258da396a33e4size=5180date=2023-09-28T18:34:06
 file,ghost/master/bluestick.ico7a9d2f571709cd8f61205409c4a5c827size=101424date=2026-02-03T16:49:36
-file,ghost/master/bootend.dic7ac4721e35c44e0c6d09e3d8cbb624a3size=38270date=2026-02-03T17:27:09
-file,ghost/master/commu.dic2922832b0b4a3bbdece1144088602404size=6800date=2026-02-01T20:43:44
+file,ghost/master/bootend.dic39c725ba09846851d33f84f3b1c72f5esize=38473date=2026-04-14T03:53:42
+file,ghost/master/chatterbox.dic41df797466d11f83c62f34864013828bsize=15177date=2026-04-14T21:06:57
+file,ghost/master/commu.dic0a18869c0add54614c28c7f3fed87e4bsize=6977date=2026-04-14T02:45:39
 file,ghost/master/descript.txt1c73415e173906c607e6de199535926fsize=2636date=2026-02-17T19:40:30
 file,ghost/master/etc.dicda01dc82d970228d670d30800902e868size=38010date=2026-01-31T21:32:35
 file,ghost/master/gomi.dll51fe9597398db01e684a0f9d52c63242size=13312date=2004-06-01T18:00:04
 file,ghost/master/gt_template.ico9b275939dbf11bd2ec5f4ef3e00fa06asize=1148date=2014-11-09T15:17:39
 file,ghost/master/mciaudior.dllb1082bccd2aac2017f7936baf2d967b3size=29696date=2003-03-13T14:23:26
-file,ghost/master/menu.dic30e8acbec0e4b586b3716a11df41bfb3size=37886date=2026-02-15T16:03:09
-file,ghost/master/mouse.dicebc6d60206bcb97e78ed26a516929dfasize=12061date=2026-01-31T21:36:31
+file,ghost/master/menu.dic016ae3f8b1499134a78806ef6f60cd64size=38441date=2026-04-14T20:26:31
+file,ghost/master/mouse.dic5ffe7267ebbb78365afe0b8a3eb51129size=12524date=2026-04-14T04:56:41
 file,ghost/master/nameteach.dic35606bc6e12a94609645b6d5f7d07994size=11682date=2026-02-03T17:44:59
 file,ghost/master/saori_cpuid.dlld13370aee8e579fe2517d789dba7c45esize=225280date=2004-04-17T17:47:18
-file,ghost/master/string.dice803cf21a381e8ae4f9e0da5e20cc3efsize=9693date=2026-02-14T19:30:30
-file,ghost/master/word.dic27f896d38aa6043d04259fa8246f39b5size=27204date=2026-02-14T18:03:05
+file,ghost/master/string.dicdb6c9eb26c36070346cade7d7e1fd488size=9909date=2026-04-14T02:28:48
+file,ghost/master/word.dic044a0e642490bdc7d96f71f5e151ee24size=33124date=2026-04-14T20:39:03
 file,ghost/master/yaya.dll56e3af56c88e696cea1f39d53b239cefsize=880640date=2022-09-10T16:18:59
-file,ghost/master/yaya.txt7d1ec0d0df1391cf10372d074406fb81size=1910date=2023-09-28T14:48:53
+file,ghost/master/yaya.txtc53b9f2008b4b1890f4418222ad56dfesize=1931date=2026-02-19T18:17:15
 file,ghost/master/yaya_base/_loading_order.txt9c350c2c9c08f635bff5eaae149af8c8size=103date=2023-06-01T05:32:24
 file,ghost/master/yaya_base/compatible.dic4f8b1e8c8c08dc44e70b1bd4f52a1affsize=4297date=2023-06-01T05:32:24
 file,ghost/master/yaya_base/config.dicd07874f4b1ba03ba111df8f2fa3cd6dbsize=2592date=2023-06-01T05:32:24
@@ -29,7 +30,7 @@ file,shell/master/descript.txtd5e090a1d40348a28aac35300ecf9cd2size=5492date=2
 file,shell/master/menu_background.pngee82ad72761d4837c3334f61ade1fbc5size=2775date=2014-11-03T07:22:30
 file,shell/master/menu_foreground.pnge0d10ee3534c5391c8e97a0897dc77a9size=2775date=2014-11-03T07:12:44
 file,shell/master/menu_sidebar.png7c405dcca0c16de439fcf21b4efecbb7size=7225date=2014-11-03T07:25:46
-file,shell/master/read me.txt6856fd1ab7cfd307653af0e350898708size=2064date=2020-11-07T01:22:18
+file,shell/master/read me.txt50585be4e3159a71c874c590d2ba12ecsize=2date=2026-04-14T20:18:13
 file,shell/master/surface0.png0942ecc51eccbee835ee9ad994ac89acsize=9043date=2026-01-30T15:46:44
 file,shell/master/surface10.png0d6b613378b26558a5ce12870dd25c1asize=504date=2026-01-30T17:33:01
 file,shell/master/surface1501.pngc91fcfb4939449f10f9d6c09191a5dd3size=8515date=2026-01-30T15:52:24
@@ -41,6 +42,9 @@ file,shell/master/surface1506.png396cd15986dbf0b09ce2818c4444ad20size=10656da
 file,shell/master/surface1507.pnge39ab9bda1637e08c478b19e36a52cd2size=8962date=2026-01-30T17:59:09
 file,shell/master/surface1508.pngdc3deaad62ceb347357826c7394df0d4size=10533date=2026-01-30T16:56:46
 file,shell/master/surface1509.png0875687fbb0b7b32e07c17095756e9a6size=12749date=2026-01-30T17:54:36
+file,shell/master/surface1510.png8462e64bd495da3698d5cbe804f96d65size=10911date=2026-04-14T02:57:40
+file,shell/master/surface1511.pngb496a0d43e6c9fbf702f3ca24a3ec2desize=11542date=2026-04-14T03:00:21
+file,shell/master/surface1512.pngb60db05e2b38f049723f3f9bd0134331size=12225date=2026-04-14T03:43:50
 file,shell/master/surface2501.png0d6b613378b26558a5ce12870dd25c1asize=504date=2026-01-30T17:39:17
 file,shell/master/surface2502.png0d6b613378b26558a5ce12870dd25c1asize=504date=2026-01-30T17:39:30
 file,shell/master/surface2503.png0d6b613378b26558a5ce12870dd25c1asize=504date=2026-01-30T17:39:41
@@ -50,6 +54,6 @@ file,shell/master/surface2506.png0d6b613378b26558a5ce12870dd25c1asize=504date
 file,shell/master/surface2507.png0d6b613378b26558a5ce12870dd25c1asize=504date=2026-01-30T17:42:27
 file,shell/master/surface2508.png0d6b613378b26558a5ce12870dd25c1asize=504date=2026-01-30T17:42:49
 file,shell/master/surface2509.png0d6b613378b26558a5ce12870dd25c1asize=504date=2026-01-30T17:43:04
-file,shell/master/surfaces.txt3d9ffb0f14bb09eaf4f9b4bdfe95afb6size=43157date=2026-01-30T18:10:20
+file,shell/master/surfaces.txt71697150024566e79771a83003b73a21size=43456date=2026-04-14T03:45:26
 file,shell/master/surfacetable.txt1ddc38e7c9929111cabec32e28d3e5basize=3037date=2021-05-05T02:09:39
 file,shell/master/thumbnail.png0992438ffe5ebf6f952be85cbb757c47size=42652date=2026-02-01T19:17:43

@@ -10,7 +10,7 @@ for contact or concerns DM me on Tumblr (https://tumblr.com/vauxhall-fb), the Uk
 
 all art by yours truly, hi :wave:, both shell and balloon
 
-some scripting by me but most of it was from the template i used and i just edited it lmao
+scripting is 50% template and 50% my own suffering at a keyboard until 5 am
 
 programs used: Firealpaca (shell art), Affinity Designer (balloon + thumbnail art), Brackets (banger Notepad++ alternative for mac), and of course, SSP.
 
