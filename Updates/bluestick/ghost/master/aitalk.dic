@@ -1,16 +1,4 @@
 ﻿//---------------------------AI Talk--------------------------
-//Alright, this is it! The bread and butter of your ghost. This is where all their random conversations are stored. Of all the .dic files, this is the one you will probably be adding stuff to and updating the most as new dialogue comes to your mind. It is relatively simple in that there aren't many functions or real coding involved with this file, but there are a few cool tricks you can do within randomtalk that can make dialogue with interesting effects, so I'll point them out as we go along.
-
-//I'm going to leave a lot of examples of different types of dialogue in here that you can study if the possibilities they present intrigue you. Study them carefully!
-
-
-//Make sure to read the walkthrough (http://www.ashido.com/ukagaka/) for more details about how to properly format ghost dialogue!
-//I will reiterate that you should be editing these in Notepad++, and in particular, you should set the Language to C (or Java I guess) to properly highlight all the text. It will make things A LOT EASIER for you, trust me! It will also help you keep track of your brackets in case you forget some. If you click on a line with a bracket in Notepad++, it should highlight where the other bracket ends, or turn purple if there's no finishing bracket (which you should definitely fix!)
-//It will also highlight my commented lines in green, so you'll know where they are. Any line beginning with // is a commented line that the code will not read. It's just for your reference!
-
-
-//If you see a big block of commented text you want to uncomment, highlight the text and then hit ctrl-shift-k in Notepad++ and that should uncomment it. Mostly this is intended for advanced users.
-
 /*
 This file has...
 
@@ -107,18 +95,86 @@ OnAiTalk
 RandomTalk : nonoverlap_pool
 {
 	//Alright, here is where all your dialogue will go. I hope you studied how to format dialogue carefully in the walkthrough, as there is little here I can help you with. You're going to have to write most of it yourself. So instead, I'll give you a set of examples to look at and perhaps draw inspiration from! You don't have to use any of these of course, you can just wipe everything in RandomTalk and just write your own dialogue by scratch. But if you're new, I'm hoping these will serve as some little stepping stools as you get more used to writing and coding dialogue.
+    
+    //emotions list so i dont have to keep checking the shell folder
+    //0 - default
+    //1 - shrug
+    //2 - surprise
+    //3 - blush
+    //4 - defeated/sad/other negative emotion
+    //5 - excited
+    //6 - thumbs up
+    //7 - angry
+    //8 - think
+    //9 - bleeeehhhhh
+    //110 - sitting
+    //111 - reading
+    //112 - play
+    
+    if hangingOut == "true" && hangouttype == "play"
+    {
+        "\0\s[112]aw yeah, we're killin' it!\e"
+        "\0\s[112]go! go! go! go!\e"
+        "\0\s[112]how does one become as goated at this game as you are...\e"
+        "\0\s[112]this is so cool.....\e"
+        "\0\s[112]%(i)blue almost facepalms in frustration, but stops himself. he is NOT having it.%(clrmrk)\e"
+        "\0\s[112]holy SKILL\e"
+    }
+    elseif hangingOut == "true" && hangouttype == "watch"
+    {
+        "\0\s[110]yoooo, did you see that???\e"
+        "\0\s[110]*watches*\e"
+        "\0\s[110]dude, this looks like something %(txtred)Red%(clrmrk) would watch....\e"
+        "\0\s[110]this is absolute CINEMA right here, chat\e"
+        "\0\s[110]%(i)blue's eyes suddenly focus on a speck of dust. he loses the speck after he blinks, and he goes back to focusing on the video.%(clrmrk)\e"
+    }
+    
+    elseif hangingOut == "true" && hangouttype == "listen"
+    {
+        "\0\s[110]yoooooo, this is fire!!!\e"
+        "\0\s[110]%(i)blue is bobbing his head to the music.%(clrmrk)\e"
+        "\0\s[110]im gonna have to listen to way more of this, bro\e"
+        "\0\s[110]oh hell yeah this is peak\e"
+        "\0\s[110]hmmhmhmmhmhmmmmm~\e"
+    }
+    
+    elseif hangingOut == "true" && hangouttype == "music"
+    {
+        "\0\s[110]me when im goated as fuck\e"
+        "\0\s[110]dude you gotta put this on spotify man\e"
+        "\0\s[110]waiter! waiter! more of %(username)'s music please!!\e"
+        "\0\s[110]me when im goated as fuck\e"
+        "\0\s[110]bow chicka bowowwwwww\e"
+        "\0\s[110]bethooven WISHES he was you"
+    }
+    
+    elseif hangingOut == "true" && hangouttype == "read"
+    {
+        "\0\s[111]why is this lowkey interesting.....\e"
+        "\0\s[111]wait can you scroll back up i missed something\e"
+        "\0\s[111]holy grammar,,,,,,,\e"
+        "\0\s[111]yknow, i always wanted to get into writing..\w8 but i honestly sort of suck......\e"
+        "\0\s[111]i honestly need to squint a little to read this....\w8\w8 maybe i should get glasses.\e"
+    }
+    
+    elseif hangingOut == "true" && hangouttype == "chilling"
+    {
+        "\0\s[110]aw yeah, makin friends....\e"
+        "\0\s[110]doot doot doot\e"
+        "\0\s[110]who needs fancy parties when you can just.... \w8\w8sit. \w8\w8with friends. :)\e"
+        "\0\s[110]i wonder if jellyfish know the exist..\e"
+    }
+    
+    elseif hangingOut == "false"
+    {
 	
 	"\0\s[4]being cool is kinda hard sometimes....\e"
 	
 	"\0\s[5]doot doot do do ba doot dayyyyyoohhhhhhhhh\e"
-	
-	//Single lines of dialogue like this are simple and easy to do.
-	
-	//"\0\s[0]This is a two line piece of dialogue.\w8\1\s[10]This is the second line.\e"
-	
-	//"\1\s[10]This is a two line piece of dialogue.\w8\0\s[0]This is the second line.\e"
-	
-	//Here is what a simple two line exchange between your characters might look like. Either character can start a piece of dialogue, it doesn't always have to be the main one.
+    
+    "\0\s[0]%(randomsonglyr)\e"
+    
+    "\0\s[5]JARVIS!\w5 google how to %(googlehowto)!\n\n\w8\w5\w8\w8...\n\n\w8\w8\w8\w8\w8\w8\s[1]...jarvis...?"
 	
 	//"\0\s[0]This is a three-step piece of dialogue.\w8\1\s[10]Here is the response.\w8\0\s[0]\n\n[half]Here is the third step.\e"
 	
@@ -207,7 +263,7 @@ RandomTalk : nonoverlap_pool
 	//--Chains
 	//Chain dialogue is unique. A dialogue chain consists of multiple bits of dialogue that get called in order over a period of time.
 	
-	"\0\s[0]i rememeber i was playing UNO with my friend \f[italic,true]Red,\f[italic,false] and he kept saying i was cheating just because i happened to get like, the luckiest hand ever. \w8\s[9]not really cool in my opinion.\e:chain=chainuno"
+	"\0\s[0]i rememeber i was playing UNO with my friend \f[italic,true]%(txtred)Red,\f[italic,false]\f[color,default] and he kept saying i was cheating just because i happened to get like, the luckiest hand ever. \w8\s[9]not really cool in my opinion.\e:chain=chainuno"
 	
 	//Note here that instead of ending the dialogue with the normal end tag of \e, it ends with \e:chain=achain. This will link down below to a chunk of code outside RandomTalk called achain. You can scroll down and find it now if you want. You can name your chain anything you want, it'd just follow the same format of \e:chain=yourchainsname. Once a dialogue has entered a chain, they won't say any other random dialogue until the chain is finished.
 	
@@ -242,13 +298,49 @@ RandomTalk : nonoverlap_pool
 	
 	//And here we're going to go back into ifs! You see, you can space out your ifs with normal dialogue if you want, as I just mentioned. Anyway, you can set up if statements to check for a lot of different things! One of the cooler ones I think are ones set to check for time. This one for example checks if the month is December. You can change month to any month you want.
 	
-	if month >= 12 || month <= 2
+	if month >= 12 && month <= 2
 	{
 		"\0\s[9]duuuuuude it's so cooooolddddddddddddd\n\n\w8i hate wiiiiiinterrrrrrrrrrrrrrrrrrrrrrrrrrrruh\e"
 		
 		"\0\s[9]yooooooo im freeeeeeeeeeziinggggggggggg\e"
+        
+        "\0\s[1]why am i the only person i know who hasn't gotten snowed on yet?\w5 %(txtred)Red's\f[color,default] gotten snow, Black's gotten snow, \w5\s[4]even Purple, who lives in the middle of a bumfrack-nowhere desert,\w5 got snow. is this divine favoritism or something?\e"
+        
+        "\0\s[0]one of the few things i like about winter is the fact that all of the bugs are gone.\w5 ....especially the centipedes.\n\n\w8\s[9] %(sub)i hate centipedes....%(clrmrk)\e"
 	}
+    
+    if month >= 3 && month <= 5
+    {
+        "\0\s[0]i love spring, it's like the peak time for taking scenery pics.\e"
+        
+        "\0\s[4]dude, i cant do anything in the warmer months.\n\n\w8\s[0]i went  to the park last week, right?\w8\s[4] i wasn't even there for FIVE MINUTES before a wasp tried to attack me.\w7 like can i at least set up first?\e"
+        
+        "\0\s[0]its always so cool watching the plants change in spring.\w8\s[9]\n\n[half]shapes and colors the likes of which i've never seen....~\e"
+    }
 	
+	if month >= 6 && month <= 7 //six sevennn  haha im such a fat fucking chud
+    {
+        "\0\s[5]aw hell yeah, its summer!\w5\s[6] i got my head on backwards and its time to party!\e"
+        
+        "\0\s[0]%(txtred)Red's\f[color,default] AC is always suspiciously broken on the exact day summer officially starts.\w5 every year,\w5 without fail,\w5 for the past five years.\e:chain=chainredac"
+    }
+    
+    if month >=8 && month <= 9
+    {
+        "\0\s[0]leaves.....\w5 crunch........\e"
+        
+        "\0\s[0]i love fall. not too hot. not too cold (usually). and cool opportunity for photos.\e"
+    }
+    
+    if month >= 10 && month <=12
+    {
+        "\0\s[0]aw yeah, holiday season.\e"
+        
+        "\0\s[0]ya know, one thing i've always wondered is why are the big three holidays right next to each other?\w8\w8\n\n...and also why is thanksgiving seemingly the odd child, but that's for another time.\e"
+        
+        "\0\s[0]oooh, it's gettin chilly.\e"
+    }
+    
 	//So you can use these to check for any number of situations. You can add as many or as few if checks if you want. You can delete these if checks too if you don't want them.
 	//You can also nest ifs within these, so you could check if it was the 25 of April in the morning for example. You can also add or take away dialogue from these as you like, so if you want to have five dialogue options for April or one for January, you can totally do that.
 	
@@ -260,6 +352,11 @@ RandomTalk : nonoverlap_pool
 		
 		"\0\s[0]i'd say i hate mondays, but i think i'd get copywrited.\w8\w8\w8\w8\n\n[half].\w8.\w8.\w8.\w8.\w8\0\s[4]\f[sub,true].or is it spelled %(i)copyrighted...???\f[sub,false]%(clrmrk)\e"
 	}
+    
+    if weekday == 3
+    {
+        "\0\s[0]it is wednesday, my dudes.\e"
+    }
 	
 	//This if checks for the time of day as defined in bootend.dic. Do you remember the words used for each chunk of time in GetTimeSlot? These are the same words! You can check for all those times, or none of them and delete this if you want.
 	if timeslot == "earlymorning"
@@ -296,6 +393,8 @@ RandomTalk : nonoverlap_pool
 	//Now we're going to go back to normal dialogue for a bit of a break. Feel free to rewrite this all as you like.
 	
 	"\0\s[1]dude, wordle is so uncool sometimes. \w8\s[9]like, what do you MEAN the answer was MYRRH???\e"
+    
+    "\0\s[0]people these days just don't get anything anymore.\w5 what's so hard to understand about adipredact scavern?\w5 its just ravern did scavern!\e"
 	
 	"\0\s[9]i wish i had a free bag of chiiiipssssuhhhhhhhhhh\e"
 	
@@ -314,9 +413,13 @@ RandomTalk : nonoverlap_pool
     //commenting this dialogue until i can figure out why its bugging hhhhhhh
     //actually no i can just turn it into a function im dumb
     
-    "%(testingwhatthefuck)"
+    "%(getgudbro)"
 
 	"\0\s[0]i remember when i was younger, \w4i drank an entire jar of olive brine.\n\n\w8...\s[1]sometimes i wonder how i'm still alive.\e"
+    
+    "%(musiclmao)"
+    
+    "\0\s[0]i should start going to the library again......\w8\w8\w8\s[1]not that they'd let me in with my eight books that haven't been returned.....\e"
 	
 	
 	//--Multiple Responses
@@ -400,6 +503,7 @@ RandomTalk : nonoverlap_pool
 	//This dialogue uses a unique tag, \_s. \_s makes it so both characters will speak the same words at the same time. Try it in Script Input to see how it works. I talk about it a little more on the walkthrough page for scripting.
 	
 	//And so we reach the end of randomtalk! I again reiterate, YOU CAN AND SHOULD WRITE YOUR OWN NEW LINES OF DIALOGUE FOR THIS! I included some random example phrases here for you just to replace the text and see what you can do, but there really aren't that many. You'll want to add more, and doing so is easy! Just copy and paste a line and redo the text. Repeat as many times as you want with as many conversations as you want. You can always expand this section!
+    }
 }
 
 
@@ -426,6 +530,11 @@ chainuno
 chaincreature
 {{CHAIN
 	"\0\s[0]i also heard about this snail thing called a \_a[https://en.wikipedia.org/Cone_snail]cone snail\_a thats like..... \w8 deadly as fuck. \w8which is immediately badass in my book.\e:chain=end"
+}}CHAIN
+
+chainredact
+{{CHAIN
+	"\0\s[0]...interestingly enough, DB started %(i)really%(clrmrk) getting cheeky at that same time, and we always hang out there during the summer.\w5\s[8]\n\n[half]makes me wonder....\e:chain=end"
 }}CHAIN
 
 chainpizza
@@ -620,7 +729,39 @@ OnSecondChange
 
 OnSurfaceRestore
  {
- 	//if reference0 == 4 || reference0 == 6 //This is checking what poses they are in. This looks to see if Girl is in pose 4 or pose 6, since she is reference0.
+    if hangingOut == "false"
+    {
+	   "\0\s[0]\1\s[10]\e"
+    }
+    elseif hangingOut == "true" && hangouttype == "play"
+    {
+    "\0\s[112]\e"
+    }
+    elseif hangingOut == "true" && hangouttype == "read"
+    {
+    "\0\s[111]\e"
+    }
+    elseif hangingOut == "true" && hangouttype == "watch"
+    {
+    "\0\s[110]\e"
+    }
+    elseif hangingOut == "true" && hangouttype == "listen"
+    {
+    "\0\s[0]\1\s[110]\e"
+    }
+    elseif hangingOut == "true" && hangouttype == "chilling"
+    {
+    "\0\s[110]\e"
+    }
+    elseif hangingOut == "true" && hangouttype == "music"
+    {
+    "\0\s[110]\e"
+    }
+    else
+    {
+    "\0if you're seeing this, this is an error.\e"
+    }
+    //if reference0 == 4 || reference0 == 6 //This is checking what poses they are in. This looks to see if Girl is in pose 4 or pose 6, since she is reference0.
  	//{
  	//"\1\s[10]You're in a sad pose.\w8\0\s[0]I'll go back to normal then.\e"
  	//}
@@ -630,8 +771,7 @@ OnSurfaceRestore
  	//}
  	//else
  	//{
-	"\0\s[0]\1\s[10]\e"
-	//}
+    //}
  }
 
  

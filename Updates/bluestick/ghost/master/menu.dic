@@ -21,9 +21,18 @@
 
 OpenSakuraMenu
 {
-		"\0\s[0]\b[2]need anything?"
+		if hangingOut == "true"
+        {
+        "\0\b[2]need anything?"
+		"\0\b[2]aw yeah, cool menu open dialogue"
+		"\0\b[2]hashtag opening menu!"
+        }
+        else
+        {
+        "\0\s[0]\b[2]need anything?"
 		"\0\s[0]\b[2]aw yeah, cool menu open dialogue"
 		"\0\s[0]\b[2]hashtag opening menu!"
+        }
 		--
 		MenuRun
 }
@@ -41,7 +50,7 @@ MenuRun : all
 	--
 	if lastTalk != "" //What this does is check to see if the ghost has already said a random bit of dialogue on its own, essentially by seeing if the lastTalk thing is NOT empty (!= means "does not equal").
 	{
-	  "\![*]\q[Repeat Last Dialogue,OnLastTalk]\n\n[half]"
+	  "\![*]\q[Repeat Last Dialogue,OnLastTalk]\n"
 	  //If the ghost has said something, it will then display this menu option. You can replace "Repeat Last Dialogue" with whatever caption you like, such as "What were you saying?" or "What did you say?" or "Could you repeat that?" or something like that.
 	  
 	  //*********************Advanced User Info*******************************
@@ -51,7 +60,14 @@ MenuRun : all
 	  //***********************************************************************
 	}
 	--
+    if hangingOut == "true"
+    {
+    "\![*]\q[Stop hanging out,OnHangoutEnd]\n"
+    }
+    --
  	"\![*]\q[Say something,OnAiTalk]\n"
+    "\![*]\q[Chatter about stuff with me,OnIntChatter]\n"
+    "\![*]\q[Play something,OnIntGames]\n\n[half]"
 	
 	//"\![*]\q[Say something 2,OnAiTalk]\n"
 	
@@ -190,7 +206,7 @@ TalkConfig : all
 
 Select.TEACHPRONOUN : all
 {
-	"\0\s[0]What pronouns do you want?\w5\n\n[half]\_q"
+	"\0What pronouns do you want?\w5\n\n[half]\_q"
 	"\![*]\q[He-His-Him,choicemasc]\n"
 	"\![*]\q[She-Her-Her,choicefem]\n"	
 	"\![*]\q[They-Their-Them,choiceneither]\e"
@@ -423,7 +439,7 @@ birthchecked
 
 Select.talkinter : all
  	{
- 		"\0\s[0]\b2how often should i yap?\w8\1\s[10]The interval is currently set to %(talktime)."
+ 		"\0\s[0]\b2how often should i yap?\w8 The interval is currently set to %(talktime)."
 		//note the new envelope here for %(talktime). You'll see it again in a second. You can replace the dialogue above with whatever you like, just make sure it ends with ./ and not \e.
  		"\0\n\n[half]"
  		"\![*]\q[Every 30 seconds,TALKMAX]\n"
@@ -445,6 +461,7 @@ Select.TALKMAX
 	{
  		talktime = "30 seconds" //this sets up the envelope properly
 		aitalkinterval = 30 //this changes the actual rate
+        prevtalkinterval = 30
 		
  		"\0\s[0]i will yap every 30 seconds.\e"
 	}
@@ -454,6 +471,7 @@ Select.TALKHIGH
 	{
  		talktime = "minute"
 		aitalkinterval = 60
+        prevtalkinterval = 60
 		
  		"\0\s[0]i will yap every minute.\e"
 	}
@@ -463,6 +481,7 @@ Select.TALKNORMAL
 	{
  		talktime = "3 minutes"
 		aitalkinterval = 180
+        prevtalkinterval = 180
 		
  		"\0\s[0]i will yap every three minutes.\e"
 	}
@@ -472,6 +491,7 @@ Select.TALKPOOR
 	{
  		talktime = "5 minutes"
 		aitalkinterval = 300
+        prevtalkinterval = 300
 		
  		"\0\s[0]i will yap every five minutes.\e"
 	}
@@ -481,6 +501,7 @@ Select.TALKNONE
 	{
  		talktime = "...actually we won't talk at all"
 		aitalkinterval = 0
+        prevtalkinterval = 0
 		
 		"\0\s[0]i will not speak.\e"
 	}
@@ -543,7 +564,7 @@ Select.dosomething : all
 //When the user clicks Open Calender. This will open the calender function of SSP, an in-built feature that you don't have to worry about in the least. You don't have to write dialogue here if you don't want to, the template's default dialogue will handle it, but it is an option.
 Select.CALENDAR
 {
-	"\0\s[0]Opening the calender.\w8\![open,calendar]\e"
+	"\0\s[0]beep! opening the calendar.\w8\![open,calendar]\e"
 	
 	//You can replace the dialogue here up to the \!.
 	//Advanced users, can you break it down yet? It's basically just using \! to open calender.exe or dll or whatever SSP uses to make it happen.

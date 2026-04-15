@@ -83,9 +83,34 @@ b
 "\f[bold,true]"
 }
 
+sub
+{
+"\f[sub,true]"
+}
+
+sup
+{
+"\f[sup,true]"
+}
+
+txtlarge
+{
+"\f[height,20]"
+}
+
+txtred
+{
+"\f[color,117,0,0]"
+}
+
+txtgreen
+{
+"\f[color,0,61,7]"
+}
+
 clrmrk
 {
-"\f[italic,false]\f[bold,false]\f[sub,false]\f[sup,false]\f[height,default]\f[default]"
+"\f[italic,false]\f[bold,false]\f[sub,false]\f[sup,false]\f[color,default]\f[height,default]\f[default]"
 }
 
 continyoubootdialogue
@@ -93,18 +118,25 @@ continyoubootdialogue
 "\w8\c\0\s[0]anyways,\w5 \s[5]i'm really glad to be here on your computer! i think it's really cool that you decided to download me onto here. \w8\n\n[half]\s[6]can't wait to hang out with you!\e"
 }
 
-testingwhatthefuck
+getgudbro
 {
 "\0\s[0]i should get back into that one game i was terrifyingly good at. \w8\n\n\s[8]what was it again??\w8"
     --
-    "...something...\w8 %(i) riders,%(clrmrk)"
+    "...something...\w8 %(i)riders,%(clrmrk)"
     "%(i) never...\w5ball, %(clrmrk)\w8or something...."
-    "...something...\w8 %(i) colors,%(clrmrk)"
-    "...something...\w8 %(i) sekai,%(clrmrk)"
-    "%(i) world of...\goo, %(clrmrk)\w8or something...."
-    "%(i) something...\w5parable,%(clrmrk)"
+    "...something...\w8 %(i)colors,%(clrmrk)"
+    "...something...\w8 %(i)sekai,%(clrmrk)"
+    "%(i) world of...\w5goo, %(clrmrk)\w8or something...."
+    "something...\w5%(i)parable,%(clrmrk)"
     "%(i) bonk...\w5something...%(clrmrk)"
     "%(i) uma...\w5something...%(clrmrk)"
+    "%(i) raft... %(clrmrk)\w8or something...."
+    "...something...\w8 %(i)gnomes,%(clrmrk)"
+    "...something...\w8 %(i)lung,%(clrmrk)"
+    "%(i) piku...\w5something...%(clrmrk)"
+    "something...\w5%(i)alchemy,%(clrmrk)"
+    "%(i) delta...\w5something...%(clrmrk)"
+    "%(i) under...\w5something...%(clrmrk)"
     --
     " \w8i think......\e"
 }
@@ -120,6 +152,63 @@ pizzachainyuh
     "that one local joint in town"
     --
     "....\w8\w8\n\n\s[0]mmmmm, pizza..........\e:chain=chainpizza"
+}
+
+musiclmao
+{
+"\0\s[0]a friend of mine introduced me to this really cool music artist.\w8 \s[8]"
+    --
+    "Jamie Paige"
+    "DECO*27"
+    "Pinnochio-P"
+    "Vane Lily"
+    "Pinata"
+    "NAKISO"
+    "Snail's House"
+    "Tame Impala"
+    "Jack Stauber"
+    "Ivycomb"
+    "RIProducer"
+    "Atena"
+    "Berried Alive"
+    "TWRP"
+    "Bill Wurtz"
+    "CG5"
+    "JTMusic"
+    "Chonny Jash"
+    "Dasu"
+    "Disko Warp"
+    "Ayesha Erotica"
+    "FLAVOR FOLEY"
+    "Harumakigohan"
+    "Kikuo"
+    "KIRA"
+    "Lemon Demon"
+    "The Living Tombstone"
+    "Maretu"
+    "Mitchie-M"
+    "Mitski"
+    "mothy"
+    "Weird Al"
+    "Porter Robinson"
+    "R Sound Design"
+    "Haraguchi Sasuke"
+    "SLAVE.V-V-R"
+    "The Stupendium"
+    "Tom Cardy"
+    "Sheena Ringo"
+    "weevildoing"
+    "wowaka"
+    "Toby Fox"
+    "bunnycat"
+    "KAT"
+    "BBpanzu"
+    "electrovoid"
+    "Kaden MacKay"
+    "Soupy Garbage Juice"
+    "That Handsome Devil"
+    --
+    ", i think it was?\e"
 }
 
 helloeverybodymynameismarkiplier
@@ -139,13 +228,103 @@ case _tempiplier
     }
 }
 
-blanklist
+randomsonglyr
 {
-	"List object 1"
-	"List object 2"
-	"List object 3"
-	"List object 4"
-	"List object 5"
+    "what do you do with a drunken sailor,\w3 what do you do with a drunken sailor,\w3 what do you do with a drunken sailor early in the\w2 mooooor\w3nen'"
+    "i am the queen i am the queen\w8 i am the killer killer queen\w8 i am the antagonist of chaaaapter two"
+    "and i falter on the forethought....."
+    "bmmmnmnmnm\w8 i got like hella money\w8 i got like hella money\w8 i got like five bucks\w8\s[2] what!!!!"
+    "whopper whopper whopper whopper junior double triple whopper"
+    "i'm gonna reach for the staaaaaaars......\w8 although they look pretty faaaaaaaarrrrrrr....."
+    "two tr-\w8\w8\w8\n\n...\n\n\w8\w8\w8............\s[1]oh.\w8\w8 my social advisors have advised me not to finish that."
+    "hu\w5man\w5 cen\w2ti\w2pede, \w5hu\w5man\w5 cen\w2tipeeeeeeede"
+    "la dee da dee da dee da dee dayohhhhh"
+}
+
+googlehowto
+{
+	"open a can of peas"
+	"download a virtual machine"
+    "sing like a goddess"
+    "become batman"
+    "stop having to f\s[9]IX SO MANY BUGS UGHHHHHHHHHHHHHHHHHHHH"
+    "make a niche ship really popular so everyone can hop on your totally based agenda"
+    "use a 3d printer"
+    "draw a beatboxing puppy"
+    "get better at drawing without suffering through learning anatomy"
+    "get to the nether in minecraft"
+    "eat french toast"
+    "floss your teeth"
+    "get away with having a sugary diet without messing up your teeth"
+    "stop hyperfixating on things nobody cares about anymore"
+    "dye your own hair"
+    "run tomodachi life on a pc"
+}
+
+OnRpsCheck
+{
+_bluerps = RAND(2)
+
+case _bluerps
+      {
+             when 0
+            {
+                if tesstvar == "rpsrock"
+                {
+                "\0\s[0]%(i)blue chooses paper.%(clrmrk)\w8\w8\n\n\s[5]aw yeah, i win!\w8 paper beats rock!\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                elseif tesstvar == "rpspaper"
+                {
+                "\0\s[0]%(i)blue chooses paper.%(clrmrk)\w8\w8\n\n\s[1]damn, a tie...\w8\w8 \s[0]another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                elseif tesstvar == "rpsscissors"
+                {
+                "\0\s[0]%(i)blue chooses paper.%(clrmrk)\w8\w8\n\n\s[4]aw man, i lost....\w8 welp...\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                else
+                {
+                "\0\s[0]if you're seeing this, this is an error.\e"
+                }
+            }
+            when 1
+            {
+                if tesstvar == "rpspaper"
+                {
+                "\0\s[0]%(i)blue chooses scissors.%(clrmrk)\w8\w8\n\n\s[5]aw yeah, i win!\w8 scissors beats paper!\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                elseif tesstvar == "rpsscissors"
+                {
+                "\0\s[0]%(i)blue chooses scissors.%(clrmrk)\w8\w8\n\n\s[1]damn, a tie...\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                elseif tesstvar == "rpsrock"
+                {
+                "\0\s[0]%(i)blue chooses scissors.%(clrmrk)\w8\w8\n\n\s[4]aw man, i lost....\w8 welp...\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                else
+                {
+                "\0\s[0]if you're seeing this, this is an error.\e"
+                }
+            }
+            when 2
+            {
+                if tesstvar == "rpsscissors"
+                {
+                "\0\s[0]%(i)blue chooses rock.%(clrmrk)\w8\w8\n\n\s[5]aw yeah, i win!\w8 rock beats scissors!\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                elseif tesstvar == "rpsrock"
+                {
+                "\0\s[0]%(i)blue chooses rock.%(clrmrk)\w8\w8\n\n\s[1]damn, a tie...\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                elseif tesstvar == "rpspaper"
+                {
+                "\0\s[0]%(i)blue chooses rock.%(clrmrk)\w8\w8\n\n\s[4]aw man, i lost....\w8 welp...\w8\w8\s[0] another round?\n\n\_q\q[sure,igrps]\n\q[nah,OnIntGames]"
+                }
+                else
+                {
+                "\0\s[0]if you're seeing this, this is an error.\e"
+                }
+            }
+      }
 }
 
 blanklist2
@@ -181,6 +360,14 @@ usersfolder
 	"%(username)'s Recycle Bin"
 	"%(username)'s Document folder"
 	"%(username)'s Downloads folder"
+}
+
+yourfoldersig
+{
+"recycle bin"
+"documents folder"
+"downloads folder"
+"desktop"
 }
 
 

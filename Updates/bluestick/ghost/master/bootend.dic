@@ -245,6 +245,8 @@ OnBoot
 	passhour = 0
 	passmin = 0
 	passsec = 0
+    hangingOut = "false"
+    hangouttype = "none"
 	
  	"\0\s[0]\1\s[10]" //This sets them up in their neutral pose for now.
 	
@@ -402,7 +404,8 @@ normalboottalk
 
 OnClose
  {
-	 
+	 hangingOut = "false"
+     hangouttype = "none"
 	 "\0\s[5]cya later alligator!\w8\w8\-"
 	 
 	 "\0\s[6]see you around!\w8\w8\-"
@@ -536,6 +539,8 @@ OnWindowStateRestore
  
 OnGhostChanging
  {
+    hangingOut = "false"
+    hangouttype = "none"
 	if reference0 == "Bluestick" //Replace this with the name of your Sakura character as you put in install.txt or descript.txt. I set this up to use the full ghost's name with Hunter and Smoker but I forget exactly how I did it and I'm having trouble getting it to work again. I think I just didn't define the Sakura or Kero names in either descript.txt or install.txt. You can experiment with it yourself. Otherwise, leave it as your Sakura character's name.
 	{
 		"\0\s[9]brrt! reloading now!\w8\w8\e"
@@ -556,6 +561,8 @@ OnGhostChanging
 
 OnGhostChanged
 {
+    hangingOut = "false"
+    hangouttype = "none"
 	"\0\s[0]\1\s[10]" //this sets up their default poses
 	--
 	if reference0 == "Bluestick" //As above, this should be the name of your ghost as in install.txt or descript.txt.

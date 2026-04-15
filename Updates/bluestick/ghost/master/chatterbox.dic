@@ -1,0 +1,493 @@
+//--- made this to not absolutely clutter aitalk lol ---
+
+OnIntChatter
+{
+    //emotions list so i dont have to keep checking the shell folder
+    //0 - default
+    //1 - shrug
+    //2 - surprise
+    //3 - blush
+    //4 - defeated/sad/other negative emotion
+    //5 - excited
+    //6 - thumbs up
+    //7 - angry
+    //8 - think
+    //9 - bleeeehhhhh
+    //110 - sitting
+    //111 - reading
+    //112 "so i was playing on my switch-" nintendopilled switchmaxxing
+    
+    //"\0\s[0]test!\e" YAY IT WORKS!!! TADA EMOJI
+    
+    "\0\s[0]ohh, yeah? wanna talk?\_q\n\n\![*]\q[ask Bluestick something,askblue]"
+    --
+    if hangingOut == "false"
+    {
+    "\n\![*]\q[hang out with me,OnHangout]"
+    }
+    --
+    "\n\n\![*]\q[Nevermind,BACKTOMENU]"
+    
+    //. paste after the second \n . \![*]ask me something (bugged out right now)\n
+    
+}
+
+//--- defining some functions down here so i dont have to go between word dot dic and this file every five seconds ---
+
+//blueaskme
+//{
+    //"\0\s[5]oh yeah i got one!\n\n\w5\w5\c\0\s[0]\b2"
+        //--
+        //"what's your favorite color?\n\n[half]\_q\![*]\q[Red,caRed]\n\![*]\q[Orange,caOrange]\n\![*]\q[Yellow,caYellow]\n\![*]\q[Lime,caLime]\n\![*]\q[Green,caGreen]\n\![*]\q[Sea Green (or Aquamarine),caSeaGreen]\n\![*]\q[Cyan,caCyan]\n\q[Blue,caBlue]\n\q[Navy,caNavy]\n\![*]\q[See other colors,othercolors]"
+        //"what's your favorite type of food?"
+        //"what's your favorite game?"
+        //"what's your favorite genre of music?"
+        //--
+
+//}
+
+
+
+//--- selects ---
+
+Select.askme
+    {
+    "\0\s[0]ooh, you want me to ask something about you...???\w5\s[1] lemme think of a question real quick...\w8\s[8]\w8\w8\w8\w8\w5\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8\w8 %(blueaskme)\c"
+    }
+    
+Select.askblue
+    {
+    "\0\s[0]what do you wanna ask?\_q\n\n\![*]\q[how are you doing?,abHowDoing]\n\![*]\q[ask about his friends,abFriends]\n\![*]\q[ask about his job,abJob]\n\![*]\q[ask about his hobbies,abHobbies]\n\![*]\q[ask about his family,abFamily]\n\![*]\q[ask about his love life,abLove]\n"
+    }
+    
+//------ selects for the askblue section -----
+
+Select.abHowDoing
+    {
+    "\0\s[0]glad you asked! i'm "
+    --
+    "feelin good"
+    "great"
+    "okay"
+    "kinda meh"
+    "chillin"
+    "tired"
+    "in the mood for some food"
+    "vibrating with barely restrained positive energy and emotion"
+    --
+    " right now.\w8 what about you?\n\n\_q\![*]\q[i'm great,hdGreat]\n\![*]\q[i'm good,hdGood]\n\![*]\q[i'm okay,hdOk]\n\![*]\q[i'm meh,hdMeh]\n\![*]\q[i'm not too good,hdFrownEmoji]\n\![*]\q[i'm bad,hdBad]\n"
+    }
+    
+Select.abFriends
+    {
+    "\0\s[0]my friends?\w5\w5\s[5] oh, yeah, i got a loooooooooot of friends!\w5 they're all really chill, too.\x\s[3]....dont tell anyone,\w5 but %(txtred)%(i)Red%(clrmrk) is my favorite.\w8\n\n\_q\![*]\q[ask something else,askblue]\n\![*]\q[menu,BACKTOMENU]"
+    }
+
+Select.abJob
+    {
+    "\0\s[1]my......job????\w8\w8\w8\s[4] i dont really have one.... unless you call playing games all day without an audience a job..\w8\n\n\_q\![*]\q[ask something else,askblue]\n\![*]\q[menu,BACKTOMENU]"
+    }
+    
+Select.abHobbies
+    {
+    "\0\s[8]hobbies, huh...\w8\w8\w8\s[0] i guess i like gaming...does that count?\w8\n\n\_q\![*]\q[ask something else,askblue]\n\![*]\q[menu,BACKTOMENU]"
+    }
+    
+Select.abFamily
+    {
+    "\0\s[0]my family?\w8\s[5]oh yeah!\w5 i got a little sibling, %(i)DB!%(clrmrk)! that's basically it, though.\w8\n\n\_q\![*]\q[ask something else,askblue]\n\![*]\q[menu,BACKTOMENU]"
+    }
+    
+Select.abLove
+    {
+    "\0\s[1]..............\w8\w8\w8\w8\c\s[4].......i don't wanna talk about it.\w8\n\n\_q\![*]\q[ask something else,askblue]\n\![*]\q[menu,BACKTOMENU]"
+    "\0\s[1].....................\w8\w8\w8\w8\c\s[4]yeah, no.\w8\n\n\_q\![*]\q[ask something else,askblue]\n\![*]\q[menu,BACKTOMENU]"
+    }
+    
+//-------- subselect for the how doing --------
+
+Select.hdGreat
+    {
+    "\0\s[6]hell yeah! good to hear!\e"
+    }
+
+Select.hdGood
+    {
+    "\0\s[6]hell yeah! good to hear!\e"
+    }
+    
+Select.hdOk
+    {
+    "\0\s[6]hell yeah! good to hear!\e"
+    }
+    
+//------ selects for the others ------
+
+    
+//------ selects for the color question ------
+
+ Select.caRed
+    {
+    "\0\s[0]oooh, red huh?\w5 red is a pretty cool color, honestly.\e"
+    }
+    
+Select.othercolor
+    {
+    "\q[Indigo,caIndigo]\n\q[Purple,caPurple]\n\q[Violet,caViolet]\n\q[Pink,caPink]\n\q[Magenta,caMagenta]\n\q[White,caWhite]\n\q[Grey,caGrey]\n\q[Black,caBlack]\n\q[All colors....,caRainbow]"
+    }
+
+//---- games ----
+
+OnIntGames
+{
+    //"\0\s[0]test!\e" works!!
+    
+    "\0\s[5]wanna play a game?\_q\n\n\![*]\q[rock paper scissors,igrps]\n\![*]\q[trivia,igtrivia]\n\n\![*]\q[Nevermind,BACKTOMENU]"
+}
+
+// ----- trivia -----
+
+Select.igtrivia
+    {
+    "\0\s[0]oooh, trivia eh?\w8 pick a category!\_q\n\n\![*]\q[Easy trivia,OnGameTriviaEasy]\n\![*]\q[Meme trivia,OnGameTriviaMeme]\n\![*]\q[...nevermind,OnIntGames]"
+    
+    //. insert after \n on memetrivia when finished  . \![*]Periodic table trivia (not finished yet)\n\![*]Fandom trivia (not finished yet)\n
+    }
+
+OnGameTriviaEasy
+{
+triviatype = 1
+_temprivia = RAND(10)
+
+case _temprivia
+    {
+        when 0
+        {
+        anser = "52"
+        altAnser = "fifty two"
+        respondAnser = "there are 52 cards in a typical deck."
+        "\0\s[0]how many cards are in a typical deck of playing cards?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 1
+        {
+        anser = "the mitochondria"
+        altAnser = "mitochondria"
+        respondAnser = "the mitochondria is the powerhouse of the cell."
+        "\0\s[0]what is the powerhouse of the cell?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 2
+        {
+        anser = "the nile"
+        altAnser = "nile river"
+        respondAnser = "the nile river is the longest river in the world."
+        "\0\s[0]what is the longest river in the world?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 3
+        {
+        anser = "world wide web"
+        altAnser = "the world wide web"
+        respondAnser = "WWW stands for world wide web."
+        "\0\s[0]what does WWW mean?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 4
+        {
+        anser = "k"
+        respondAnser = "the symbol on the periodic table for potassium is K."
+        "\0\s[0]what is the chemical symbol used to represent the element potassium on the periodic table?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 5
+        {
+        anser = "jupiter"
+        respondAnser = "the largest planet in the solar system is jupiter."
+        "\0\s[0]what is the largest planet in the solar system?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 6
+        {
+        anser = "strike"
+        altAnser = "a strike"
+        respondAnser = "when a batter misses the ball in baseball, it is called a strike."
+        "\0\s[0]when playing baseball, what is it called when the batter misses and does not hit the ball?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 7
+        {
+        anser = "mercury"
+        respondAnser = "the planet closest to the sun is mercury."
+        "\0\s[0]what is the planet closest to the sun?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 8
+        {
+        anser = "black widow"
+        altAnser = "widow"
+        respondAnser = "the spider known for the red hourglass marking on it's back is the black widow."
+        "\0\s[0]which spider is known for it's distinctive red hourglass marking?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 9
+        {
+        anser = "laughing out loud"
+        respondAnser = "the acronym LOL stands for laughing out loud, but some people, usually older people, may use it differently, such as to mean lots of laughs or lots of love."
+        "\0\s[0]what does LOL mean?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+    }
+}
+
+OnGameTriviaMeme
+{
+triviatype = 2
+_temprivia = RAND(8)
+
+case _temprivia
+    {
+        when 0
+        {
+        anser = "rick astley"
+        respondAnser = "the song ''never gonna give you up'' is by rick astley."
+        "\0\s[0]who made the infamous song ''never gonna give you up''?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 1
+        {
+        anser = "pepe"
+        altAnser = "pepe the frog"
+        respondAnser = "the frog is known as pepe the frog."
+        "\0\s[0]what is the name of the green frog often used in memes and as a twitch emote?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 2
+        {
+        anser = "mcdonalds"
+        respondAnser = "the first thing any female born after 1983 knows is McDonalds."
+        "\0\s[0]what is the first thing any female born after 1983 knows?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 3
+        {
+        anser = "financial support"
+        altAnser = "your financial support"
+        respondAnser = "bernie sanders is once again asking for your financial support."
+        "\0\s[0]what is bernie sanders asking for?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 4
+        {
+        anser = "loss"
+        respondAnser = "im at a loss for words"
+        "\0\s[0]l   ll\nll   l_\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 5
+        {
+        anser = "kabosu"
+        respondAnser = "doge's real name is kabosu."
+        "\0\s[0]what is the name of doge?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 6
+        {
+        anser = "haha 69"
+        altAnser = "420"
+        respondAnser = "hell yeah."
+        "\0\s[0]69?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+        when 7
+        {
+        anser = "us"
+        altAnser = "you"
+        respondAnser = "all your base are belong to us."
+        "\0\s[0]who does your base belong to?\![open,inputbox,OnTriviaAnswer,-1]"
+        }
+    }
+}
+
+OnTriviaAnswer
+{
+userAnser = reference0
+
+if userAnser == anser || userAnser == altAnser
+      {
+      "\0\s[5]correct!\w5 %(respondAnser)\w8\x\c\s[0]play again?\n\n\_q\![*]\q[yes,triviaplayagain]\n\![*]\q[no,OnIntGames]"
+      }
+else
+      {
+      "\0\s[9]er!\w5 incorrect.\w8\s[0] the correct answer is %(anser)\n\n\w8\x\c\s[0]play again?\n\n\_q\![*]\q[yes,triviaplayagain]\n\![*]\q[no,triviaexit]"
+      }
+}
+
+Select.triviaplayagain
+{
+    if triviatype == 1
+    {
+    "\0\s[0]same category or a different one?\n\n\![*]\q[same one,OnGameTriviaEasy]\n\![*]\q[different one,igtrivia]"
+    }
+    elseif triviatype == 2
+    {
+    "\0\s[0]same category or a different one?\n\n\![*]\q[same one,OnGameTriviaMeme]\n\![*]\q[different one,igtrivia]"
+    }
+    else
+    {
+    "\0\s[0]if you're seeing this, this is an error.\e"
+    }
+}
+
+//\q[Periodic table trivia,OnGameTriviaTable]\n\q[Fandom trivia,OnGameTriviaFandom]
+
+//\![*]\q[trivia,igtrivia]
+
+// ----- rock paper scissors -----
+
+Select.igrps
+    {
+    "\s[0]aw yeah, rock paper scissors!\w8 i'm ready when you are!\w8\w8\n\n\_q\![*]\q[rock,rpsrock]\n\![*]\q[paper,rpspaper]\n\![*]\q[scissors,rpsscissors]"
+    }
+    
+Select.rpsrock
+    {
+    tesstvar = reference0
+    "\0\s[0]%(i)you choose rock...%(clrmrk)\w8\w8\n\n\![raise,OnRpsCheck]"
+    }
+    
+Select.rpspaper
+    {
+    tesstvar = reference0
+    "\0\s[0]%(i)you choose paper...%(clrmrk)\w8\w8\n\n\![raise,OnRpsCheck]"
+    }
+    
+Select.rpsscissors
+    {
+    tesstvar = reference0
+    "\0\s[0]%(i)you choose scissors...%(clrmrk)\w8\w8\n\n\![raise,OnRpsCheck]"
+    }
+    
+// ----------- hangout
+
+OnHangout
+{
+    "\0\s[5]\b[2]what do you wanna do?\n\n\_q\![*]\q[play something,hangoutplay]\n\![*]\q[watch something,hangoutwatch]\n\![*]\q[draw,hangoutdraw]\n\![*]\q[listen to something,hangoutlisten]\n\![*]\q[make music,hangoutmusic]\n\![*]\q[read,hangoutread]\n\![*]\q[just hangout,hangoutokay]\n\![*]\q[nevermind,OnIntChatter]"
+}
+
+Select.hangoutplay
+{
+    hangouttype = "play"
+    "\0\s[5]sure! i'll play something alongside you, if thats cool!\w8\w8\w8\w8\w8\cdo you want me to stop talking while we hang?\n\n\_q\q[sure,shutupblue]\n\q[nah,OnHangoutTalk]"
+}
+
+Select.hangoutwatch
+{
+    hangouttype = "watch"
+    "\0\s[5]sure! i cant wait to see what you got in mind!\w8\w8\w8\w8\w8\cdo you want me to stop talking while we hang?\n\n\_q\q[sure,shutupblue]\n\q[nah,OnHangoutTalk]"
+}
+
+Select.hangoutdraw
+{
+    hangouttype = "draw"
+    "\0\s[5]sure! i'll draw something alongside you, if thats cool.\w8\w8\w8\w8\w8\cdo you want me to stop talking while we hang?\n\n\_q\q[sure,shutupblue]\n\q[nah,OnHangoutTalk]"
+}
+
+Select.hangoutlisten
+{
+    hangouttype = "listen"
+    "\0\s[5]sure! i dont mind listening to something!\w8\w8\w8\w8\w8\cdo you want me to stop talking while we hang?\n\n\_q\q[sure,shutupblue]\n\q[nah,OnHangoutTalk]"
+}
+
+Select.hangoutmusic
+{
+    hangouttype = "music"
+    "\0\s[5]sure! i just know youre gonna make one hell of a banger.\w8\w8\w8\w8\w8\cdo you want me to stop talking while we hang?\n\n\_q\q[sure,shutupblue]\n\q[nah,OnHangoutTalk]"
+}
+
+Select.hangoutread
+{
+    hangouttype = "read"
+    "\0\s[5]sure! i'll read something alongside you, if thats cool!\w8\w8\w8\w8\w8\cdo you want me to stop talking while we hang?\n\n\_q\q[sure,shutupblue]\n\q[nah,OnHangoutTalk]"
+}
+
+Select.hangoutokay
+{
+    hangouttype = "chilling"
+    "\0\s[5]sure! i dont mind just chilling here :)\w8\w8\w8\w8\w8\cdo you want me to stop talking while we hang?\n\n\_q\q[sure,shutupblue]\n\q[nah,OnHangoutTalk]"
+}
+
+
+Select.shutupblue
+{
+    if hangouttype == "watch"
+    {
+    aitalkinterval = 0
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "listen"
+    {
+    aitalkinterval = 0
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "music"
+    {
+    aitalkinterval = 0
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "chilling"
+    {
+    aitalkinterval = 0
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "play"
+    {
+    aitalkinterval = 0
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[112]\e"
+    }
+    elseif hangouttype == "read"
+    {
+    aitalkinterval = 0
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[111]\e"
+    }
+    else
+    {
+    "\0\s[0]if you're seeing this, this is an error.\e"
+    }
+}
+
+OnHangoutTalk
+{
+    if hangouttype == "watch"
+    {
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "listen"
+    {
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "music"
+    {
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "chilling"
+    {
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[110]\e"
+    }
+    elseif hangouttype == "play"
+    {
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[112]\e"
+    }
+    elseif hangouttype == "read"
+    {
+    hangingOut = "true"
+    "\0'kay!\w8\w8\w8\w8\s[111]\e"
+    }
+    else
+    {
+    "\0\s[0]if you're seeing this, this is an error.\e"
+    }
+}
+
+
+OnHangoutEnd
+{
+    aitalkinterval = prevtalkinterval
+    hangingOut = "false"
+    hangouttype = "none"
+    "\0alrighty, then! it was nice hanging out!\w8\w8\w8\w8\w8\s[0]\e"
+}

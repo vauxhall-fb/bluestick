@@ -132,9 +132,23 @@ ReplyToGhost
              AlreadyResponded = 1 //setting a flag to say they've responded once already
 
              {
-             "\0\s[0]Hello, %(res_reference0).\w8\1\s[10]Hope you're doing well.\e"
-
-             "\1\s[10]Hey, %(res_reference0).\e"
+             "\0\s[0]yo, %(res_reference0)!\e"
              }
        }
+}
+
+//******************************
+
+OnNeedlePoke
+{
+	if reference0 == 0 //Sakura
+	{
+		"\0\s[2]ow!\w8\w8\w8\w8\s[4] come on, man! :("
+        "\0\s[2]YEEEEOWCH!"
+        "\0\s[2]OW OW OW OWWWWWWUH"
+	}
+	elseif reference0 == 1 //Kero
+	{
+			"\1Ow!"
+	}
 }

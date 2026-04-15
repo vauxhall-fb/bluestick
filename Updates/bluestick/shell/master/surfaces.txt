@@ -202,6 +202,24 @@ surface9
 element1,overlay,surface1509.png,0,0
 }
 
+// sitting
+surface110
+{
+element1,overlay,surface1510.png,0,0
+}
+
+// reading
+surface111
+{
+element1,overlay,surface1511.png,0,0
+}
+
+// bros playing tomodachi life living the dream and im NOT because I DONT HAVE A SWITCH. BLASPHEMY.
+surface112
+{
+element1,overlay,surface1512.png,0,0
+}
+
 
 //--The Side Character's poses------------------
 //I actually intended to do the same thing here with Triangle's default pose as I did with Girl, but then I remembered that he has no mouth, so he can't even use talking frames, haha. He can however use blinking frames! So I'm going to copy the same blinking chunk from surface0 and put it here.

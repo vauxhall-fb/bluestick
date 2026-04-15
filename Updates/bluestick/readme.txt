@@ -20,7 +20,7 @@ thank you to https://www.ashido.com/ukagaka/ for the banger tutorial and templat
 
 ----
 
-i plan to add more to this ghost in the future yeahhh but for now he is no more than a stick that yaps :) feel free to suggest ideas
+i possibly plan to add more to this ghost in the future yeahhh :) feel free to suggest ideas
 
 ----
 
@@ -35,13 +35,16 @@ hotkeys :
 
 Version Log :
 
+- 04/14/26 - 2.0 - more interaction! :D now you can do simple things like play rock paper scissors, hangout with him, and ask him things from a set list! also a few more things and minor bug fixes
 - 02/15/26 - 1.0 - He gets to see the world! (Official distribution)
 - 01/24/26 - 0.0 - He exists! (Started development)
 
 Known Issues (allegedly) :
 
-- Issues with network updates but admittedly i might be a little incompetent with this specific feature so it'll prolly take a minute to fix :( sorrgy. might disable it completely if i cant work it out.
-- A few typos i think
+- OnSurfaceRestore might restore the wrong surface when hanging out.
+- If you choose to hangout with him during a dialogue chain, it has to finish the chain before it gets to the hangout dialogue.
+- Still cant get network updates to work :(
+- Maybe one or two typos
 
 ---
 

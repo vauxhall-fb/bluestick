@@ -115,7 +115,14 @@ OnMouseDoubleClick
 	{
 	 	if reference3 == 0 //if the character is 0, aka your main character
 		{
-		MouseDoubleClickSakura
+            if hangingOut == "true"
+            {
+                "\0do you want to stop hanging out?\n\n\![*]\q[yes,OnHangoutEnd]\n\![*]\q[no just open the menu,openthemenukronk]"
+            }
+            else
+            {
+            MouseDoubleClickSakura
+            }
 		}
 		else
 		{
@@ -144,10 +151,7 @@ MouseDoubleClickSakura
  {
  	if reference4 == "Head" || reference4 == "Face" //here, this is checking to see if the user is double clicking on either the character's head OR their face, which for our purposes means they're hitting the ghost. More about operators at the walkthrough.
 	{
-		"\0\s[4]ow :C\e"
-		"\0\s[1]ow. uncool, dude.\e"
-		"\0\s[1]can you please not thanks okay\e"
-		"\0\s[4]owwwwuh\e"
+		"\0\s[0]are you sure you want to hit bluestick?\n\n\![*]\q[yes,hitbluestick]\n\![*]\q[no,yippeenohitting]"
 		//Replace this dialogue with appropriate dialogue as you need. You can add more or cut it down if you want, even down to nothing if you want no response from your ghost at all when those areas are double clicked.
  	}
 	else
@@ -181,3 +185,16 @@ MouseDoubleClickKero
  //*********************Advanced User Info*******************************
  //There are other mouse related functions you could set up much like the above, such as OnMouseDragStart, OnMouseDragEnd, OnMouseWheel, and others which correspond to various things you can do with your mouse. You can probably guess what those functions do just by their names - OnMouseWheel would be if someone spun their mouse wheel over a certain area, for example. If you're interested in these, I'd recommend doing some reading at the CROW-SSP Encyclopedia to get a better idea of them and settle down for some trial and error learning as you try to put them in.
  //***********************************************************************
+ 
+ Select.hitbluestick
+ {
+        "\0\s[4]ow :C\e"
+		"\0\s[1]ow. uncool, dude.\e"
+		"\0\s[1]can you please not thanks okay\e"
+		"\0\s[4]owwwwuh\e"
+ }
+ 
+ Select.openthemenukronk
+ {
+    OpenSakuraMenu
+ }
