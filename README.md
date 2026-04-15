@@ -6,7 +6,7 @@ this blue stick really is a cool guy, don't you think? :)
 
 for contact or concerns DM me on [Tumblr](https://tumblr.com/vauxhall-fb), the [Ukagaka Dream Team Forum](https://forum.ukagakadreamteam.com/u/vauxhall-fb), leave an issue report here on Github, or leave a [Strawpage](https://vauxhall-fb.straw.page) gimmick.
 
-download only the .nar file and the *bluestick balloon.zip* file. the updates folder is for network updates.
+download only the .nar file and the *bluestick balloon.zip* file from releases. the updates folder is for network updates.
 
 ---
 
@@ -14,9 +14,9 @@ download only the .nar file and the *bluestick balloon.zip* file. the updates fo
 
 Bluestick is a little desktop pal (or, "ghost/ukagaka," rather) for your pc that can do stuff! :)
 
-"oh, what can he do?" very cool that you asked! he can talk with you, check your email, remind you of stuff, and more!
+"oh, what can he do?" very cool that you asked! he can talk with you, hangout with you, check your email, remind you of stuff, and more!
 
-i have a lot more planned for my glorious son, but will update him when i get around to it (and have enough time/power to do so). he's currently on version 1.0 as of Feb 17th 2026.
+i still have more ideas for him even though his latest update is what i'd consider a pretty big one. he's currently on version 2.0 as of Apr 14th 2026.
 
 ”what's SSP?“ a super cool program that allows Bluestick and other ghosts to run!
 
@@ -24,11 +24,12 @@ i have a lot more planned for my glorious son, but will update him when i get ar
 
 ”how do i make my own?“ i'm not really good at explaining things, but he was made with the help of the tutorial and template at https://www.ashido.com/ukagaka/ ! it's really helpful and clear and he wouldn't exist without it! :)
 
-”do you have any lore?“ nope! not yet. not really, anyways.
+”do you have any lore?“ maybe... ;)
 
 "how is an ukagaka different from a shimeji?" um. do more stuff methinks. perchance.
 
-<img width="171" height="374" alt="Screen Shot 2026-02-17 at 20 26 43 1" src="https://github.com/user-attachments/assets/777f1ee2-6038-4980-92f7-5938a0cdf419" />
+<img width="171" height="374" alt="Screen Shot 2026-02-17 at 20 26 43 1" src="https://github.com/user-attachments/assets/777f1ee2-6038-4980-92f7-5938a0cdf419" /> <img width="384" height="329" alt="Screen Shot 2026-04-14 at 4 43 42" src="https://github.com/user-attachments/assets/0988588a-a115-4fa9-be6f-6cd6ccafe5e5" />
+
 
 ---
 
@@ -79,7 +80,7 @@ any issues with installation can probably be troubleshooted on the [Ukagaka Drea
 
 all art by yours truly, hi :wave:, both shell and balloon
 
-some scripting by me but most of it was from the template i used and i just edited it lmao
+scripting is 50% template and 50% my own suffering at a keyboard until 5 am
 
 programs used: Firealpaca (shell art), Affinity Designer (balloon + thumbnail art), Brackets (banger Notepad++ alternative for mac), and of course, SSP.
 
@@ -89,7 +90,7 @@ thank you to https://www.ashido.com/ukagaka/ for the banger tutorial and templat
 
 ---
 
-i plan to add more to this ghost in the future yeahhh but for now he is no more than a stick that yaps :) feel free to suggest ideas
+i possibly plan to add more to this ghost in the future yeahhh :) feel free to suggest ideas
 
 ---
 
@@ -102,12 +103,15 @@ hotkeys :
 
 Version Log :
 
+- 04/14/26 - 2.0 - more interaction! :D now you can do simple things like play rock paper scissors, hangout with him, and ask him things from a set list! also a few more things and minor bug fixes
 - 02/15/26 - 1.0 - He gets to see the world! (Official distribution)
 - 01/24/26 - 0.0 - He exists! (Started development)
 
 Known Issues (allegedly) :
 
-- Issues with network updates but admittedly i might be a little incompetent with this specific feature so it'll prolly take a minute to fix :( sorrgy. might disable it completely if i cant work it out.
-- A few typos i think
+- OnSurfaceRestore might restore the wrong surface when hanging out.
+- If you choose to hangout with him during a dialogue chain, it has to finish the chain before it gets to the hangout dialogue.
+- Still cant get network updates to work :(
+- Maybe one or two typos
 
 ---
