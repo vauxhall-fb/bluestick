@@ -2,14 +2,14 @@ Charset,UTF-8
 __system_settings_version__,2
 Char1.balloon.isleft,1
 inputbox.left,622
-scriptbox.left,837
-balloon0.offset,-30.-29
+scriptbox.left,834
+balloon0.offset,73.65
 Char0.ratio.x,0.813281250
 Char0.ratio.devid,lZXh+ck6GC8x21TkcvfWow==
 Char0.ratio.y,1.000000000
 Char0.balloon.isleft,1
 Char1.ratio.devid,lZXh+ck6GC8x21TkcvfWow==
-scriptbox.top,235
+scriptbox.top,84
 Char1.ratio.x,0.822656250
 Char1.ratio.y,0.957500000
 inputbox.top,481

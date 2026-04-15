@@ -113,12 +113,27 @@ Select.hdGreat
 
 Select.hdGood
     {
-    "\0\s[6]hell yeah! good to hear!\e"
+    "\0\s[6]good to hear!\e"
     }
     
 Select.hdOk
     {
-    "\0\s[6]hell yeah! good to hear!\e"
+    "\0\s[0]cool.\e"
+    }
+    
+Select.hdMeh
+    {
+    "\0\s[1]ah, yeah.\w5 know the feeling.\e"
+    }
+    
+Select.hdFrownEmoji
+    {
+    "\0\s[1]oh, damn...\w5 that sucks...\w8 hope your day gets better.\e"
+    }
+
+Select.hdBad
+    {
+    "\0\s[1]oooh, yikes....\w8 hope things get better for you.\e"
     }
     
 //------ selects for the others ------
